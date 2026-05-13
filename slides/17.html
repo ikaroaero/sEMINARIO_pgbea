@@ -1,0 +1,68 @@
+<section class="slide choice-slide"
+  data-note="Apresente a tensão metodológica entre PE e WPE. No clique seguinte, abra a pergunta que conduz naturalmente à GWPE."
+  data-stage-count="1">
+  <div class="choice-slide__stage choice-slide__stage--debate">
+    <div class="choice-slide__head">
+      <div class="kicker">PE x WPE</div>
+      <h2>Qual escolher?</h2>
+      <p class="choice-slide__lead">
+        A <span class="accent">PE</span> preserva muito bem a <span class="accent">ordem ordinal</span>,
+        mas trata todas as ocorrências da mesma forma. A <span class="accent">WPE</span> adiciona
+        amplitude via variância local, mas passa a enfatizar mais fortemente as flutuações intensas.
+      </p>
+    </div>
+
+    <div class="card choice-slide__arena">
+      <div class="choice-slide__intro">
+        A tensão metodológica é esta: <strong>queremos priorizar ordem ou intensidade?</strong>
+      </div>
+
+      <div class="choice-slide__compare">
+        <div class="card choice-slide__method choice-slide__method--pe">
+          <div class="choice-slide__method-name">PE</div>
+          <p>Compara apenas a ordem relativa dos valores.</p>
+          <ul class="choice-slide__points">
+            <li>robusta à escala dos dados</li>
+            <li>boa leitura da estrutura ordinal</li>
+            <li>não distingue flutuações fracas de intensas</li>
+          </ul>
+        </div>
+
+        <div class="choice-slide__vs">vs</div>
+
+        <div class="card choice-slide__method choice-slide__method--wpe">
+          <div class="choice-slide__method-name">WPE</div>
+          <p>Pondera cada ocorrência pela variância do segmento.</p>
+          <ul class="choice-slide__points">
+            <li>destaca mudanças mais intensas</li>
+            <li>incorpora informação de amplitude</li>
+            <li>pode subestimar flutuações discretas, mas relevantes</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="choice-slide__foot">
+        Em outras palavras: uma medida favorece a <span class="accent">ordem</span>,
+        a outra favorece a <span class="accent">intensidade da flutuação</span>.
+      </p>
+    </div>
+  </div>
+
+  <div class="choice-slide__stage choice-slide__stage--question">
+    <div class="card choice-slide__question-card">
+      <div class="kicker">Transição</div>
+      <h2>Será que temos que escolher?</h2>
+      <p class="choice-slide__question-lead">
+        Talvez o problema não seja decidir entre <span class="accent">PE</span> ou
+        <span class="accent">WPE</span>, mas construir um método que percorra
+        continuamente esse espectro.
+      </p>
+
+      <div class="choice-slide__spectrum">
+        <div class="choice-slide__spectrum-label">ordem</div>
+        <div class="choice-slide__spectrum-line"></div>
+        <div class="choice-slide__spectrum-label">amplitude</div>
+      </div>
+    </div>
+  </div>
+</section>

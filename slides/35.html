@@ -1,0 +1,140 @@
+<section class="slide fish-closing-slide"
+  data-note="Encerramento. Agradeça a todos e feche com a brincadeira do peixe vendido.">
+  <style>
+    .fish-closing-slide {
+      grid-template-columns: 1fr;
+      align-items: center;
+      padding: 0;
+      isolation: isolate;
+      background:
+        radial-gradient(circle at 16% 20%, rgba(96,231,255,0.18), transparent 28%),
+        radial-gradient(circle at 88% 74%, rgba(255,95,158,0.13), transparent 30%),
+        linear-gradient(135deg, #06111f 0%, #0a2440 54%, #091426 100%);
+    }
+
+    .fish-closing-slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(90deg, rgba(6,17,31,0.98) 0%, rgba(6,17,31,0.82) 33%, rgba(6,17,31,0.20) 64%, transparent 100%),
+        linear-gradient(0deg, rgba(6,17,31,0.64) 0%, transparent 42%);
+      pointer-events: none;
+    }
+
+    .fish-closing-slide::after {
+      content: "";
+      position: absolute;
+      left: 7vw;
+      bottom: 10.5vh;
+      width: min(46vw, 720px);
+      height: 3px;
+      z-index: 3;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--cyan), var(--pink), transparent);
+      box-shadow: 0 0 24px rgba(96,231,255,0.34);
+      opacity: 0.82;
+    }
+
+    .fish-closing-slide__copy {
+      position: relative;
+      z-index: 4;
+      width: min(52vw, 850px);
+      margin: 0 auto 0 7vw;
+      display: grid;
+      gap: clamp(1.1rem, 2.1vw, 1.9rem);
+      align-content: center;
+    }
+
+    .fish-closing-slide__copy h1 {
+      margin: 0;
+      font-size: clamp(4.8rem, 8.2vw, 9.2rem);
+      line-height: 0.82;
+      letter-spacing: 0;
+      text-shadow: 0 20px 60px rgba(0,0,0,0.32);
+    }
+
+    .fish-closing-slide__copy p {
+      max-width: 760px;
+      margin: 0;
+      color: color-mix(in srgb, var(--muted) 88%, white 12%);
+      font-size: clamp(1.5rem, 2.25vw, 2.5rem);
+      line-height: 1.25;
+      font-weight: 800;
+    }
+
+    .fish-closing-slide__copy p strong {
+      display: inline-block;
+      padding: 0.05em 0.26em 0.12em;
+      border-radius: 0.28em;
+      color: #06111f;
+      background: linear-gradient(135deg, #77eeff, #ffd166);
+      box-shadow: 0 0 28px rgba(96,231,255,0.24);
+      transform: rotate(-2deg);
+    }
+
+    .fish-closing-slide__image {
+      position: absolute;
+      right: max(-7vw, -120px);
+      bottom: max(-6vh, -70px);
+      z-index: 2;
+      width: min(83vw, 1320px);
+      max-height: 92vh;
+      object-fit: contain;
+      object-position: right bottom;
+      filter:
+        drop-shadow(0 34px 54px rgba(0,0,0,0.36))
+        saturate(1.06);
+    }
+
+    .fish-closing-slide__market-tag {
+      position: absolute;
+      right: clamp(2rem, 7vw, 8rem);
+      top: clamp(3.5rem, 9vh, 7rem);
+      z-index: 4;
+      padding: 0.62rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(6,17,31,0.52);
+      backdrop-filter: blur(14px);
+      color: rgba(245,251,255,0.86);
+      font-size: clamp(0.78rem, 0.9vw, 0.95rem);
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 980px) {
+      .fish-closing-slide {
+        text-align: center;
+      }
+
+      .fish-closing-slide__copy {
+        width: min(86vw, 720px);
+        margin: 8vh auto 0;
+        justify-items: center;
+      }
+
+      .fish-closing-slide__image {
+        width: 120vw;
+        right: -28vw;
+        max-height: 62vh;
+        opacity: 0.9;
+      }
+
+      .fish-closing-slide__market-tag {
+        display: none;
+      }
+    }
+  </style>
+
+  <img src="peixeiro (3).png" alt="Peixeiro segurando peixes" class="fish-closing-slide__image">
+  <div class="fish-closing-slide__market-tag">peixe fresco · tese defendida</div>
+
+  <div class="fish-closing-slide__copy">
+    <div class="kicker">Finalização</div>
+    <h1>Obrigado a todos</h1>
+    <p>Espero ter conseguido vender meu <strong>"peixe"</strong>.</p>
+  </div>
+</section>

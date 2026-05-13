@@ -1,0 +1,210 @@
+<section class="slide expected-products-slide"
+  data-note="Apresente os produtos previstos de modo metódico: produção científica, produto acadêmico, circulação e institucionalização.">
+  <style>
+    .expected-products-slide {
+      grid-template-columns: 1fr;
+      align-content: start;
+      gap: clamp(1.3rem, 2.4vh, 1.9rem);
+      padding: 5vh 6.4vw 11vh;
+    }
+
+    .expected-products-slide__head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+      gap: 2rem;
+      align-items: end;
+      width: min(100%, 1420px);
+    }
+
+    .expected-products-slide__head h2 {
+      margin: 0;
+      max-width: 920px;
+      font-size: clamp(3rem, 5vw, 5.8rem);
+      line-height: 0.93;
+    }
+
+    .expected-products-slide__head p {
+      margin: 0 0 0.35rem;
+      color: color-mix(in srgb, var(--muted) 88%, white 12%);
+      font-size: clamp(0.98rem, 1.08vw, 1.08rem);
+      line-height: 1.45;
+    }
+
+    .expected-products-slide__summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.55rem;
+    }
+
+    .expected-products-slide__summary div {
+      min-height: 78px;
+      padding: 0.7rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.09);
+      background: rgba(255,255,255,0.035);
+      display: grid;
+      align-content: center;
+      text-align: center;
+    }
+
+    .expected-products-slide__summary strong {
+      color: var(--cyan);
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .expected-products-slide__summary span {
+      color: color-mix(in srgb, var(--muted) 84%, white 16%);
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .expected-products-slide__matrix {
+      width: min(100%, 1420px);
+      display: grid;
+      grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.15fr) 100px 1fr;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background:
+        radial-gradient(circle at 8% 18%, rgba(96,231,255,0.09), transparent 32%),
+        radial-gradient(circle at 92% 88%, rgba(255,95,158,0.07), transparent 32%),
+        rgba(255,255,255,0.035);
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.16);
+    }
+
+    .expected-products-slide__cell {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.1rem;
+      border-right: 1px solid rgba(255,255,255,0.075);
+      border-bottom: 1px solid rgba(255,255,255,0.075);
+      color: color-mix(in srgb, var(--muted) 88%, white 12%);
+      font-size: clamp(0.9rem, 1vw, 1rem);
+      line-height: 1.25;
+    }
+
+    .expected-products-slide__cell:nth-child(4n) {
+      border-right: 0;
+    }
+
+    .expected-products-slide__head-cell {
+      min-height: 52px;
+      color: var(--cyan);
+      background: rgba(6,17,31,0.34);
+      font-size: 0.75rem;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .expected-products-slide__group {
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .expected-products-slide__product {
+      color: color-mix(in srgb, var(--text) 94%, var(--cyan) 6%);
+      font-weight: 850;
+    }
+
+    .expected-products-slide__qty {
+      justify-content: center;
+      padding: 0.8rem;
+    }
+
+    .expected-products-slide__qty strong {
+      width: 3rem;
+      height: 3rem;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      color: #06111f;
+      background: color-mix(in srgb, var(--qty-color) 88%, white 12%);
+      font-size: 1.55rem;
+      font-weight: 950;
+    }
+
+    .expected-products-slide__status {
+      color: color-mix(in srgb, var(--muted) 88%, white 12%);
+    }
+
+    .expected-products-slide__status strong {
+      color: var(--text);
+      font-weight: 900;
+    }
+
+    .expected-products-slide__row-muted {
+      opacity: 0.62;
+    }
+
+    .expected-products-slide__row-muted .expected-products-slide__qty strong {
+      background: rgba(255,255,255,0.13);
+      color: color-mix(in srgb, var(--muted) 42%, #06111f 58%);
+    }
+
+    @media (max-width: 1100px) {
+      .expected-products-slide__head {
+        grid-template-columns: 1fr;
+      }
+
+      .expected-products-slide__matrix {
+        grid-template-columns: minmax(160px, 0.8fr) minmax(0, 1.1fr) 78px minmax(180px, 1fr);
+      }
+    }
+  </style>
+
+  <div class="expected-products-slide__head">
+    <div>
+      <div class="kicker">Resultados esperados</div>
+      <h2>Produtos previstos do projeto</h2>
+    </div>
+
+    <div>
+      <p>
+        Organização das entregas por natureza do produto, quantidade esperada e função no projeto.
+      </p>
+      <div class="expected-products-slide__summary" aria-label="Resumo dos produtos previstos">
+        <div><strong>8</strong><span>entregas</span></div>
+        <div><strong>4</strong><span>artigos</span></div>
+        <div><strong>3</strong><span>frentes</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="expected-products-slide__matrix">
+    <div class="expected-products-slide__cell expected-products-slide__head-cell">Eixo</div>
+    <div class="expected-products-slide__cell expected-products-slide__head-cell">Produto previsto</div>
+    <div class="expected-products-slide__cell expected-products-slide__head-cell">Nº</div>
+    <div class="expected-products-slide__cell expected-products-slide__head-cell">Função no projeto</div>
+
+    <div class="expected-products-slide__cell expected-products-slide__group">Produção científica</div>
+    <div class="expected-products-slide__cell expected-products-slide__product">Artigo científico</div>
+    <div class="expected-products-slide__cell expected-products-slide__qty" style="--qty-color:#60e7ff"><strong>4</strong></div>
+    <div class="expected-products-slide__cell expected-products-slide__status"><strong>Resultado principal:</strong> publicação dos achados da tese.</div>
+
+    <div class="expected-products-slide__cell expected-products-slide__group">Produto acadêmico</div>
+    <div class="expected-products-slide__cell expected-products-slide__product">Tese de doutorado</div>
+    <div class="expected-products-slide__cell expected-products-slide__qty" style="--qty-color:#ffd166"><strong>1</strong></div>
+    <div class="expected-products-slide__cell expected-products-slide__status"><strong>Entrega final:</strong> consolidação metodológica e analítica.</div>
+
+    <div class="expected-products-slide__cell expected-products-slide__group">Síntese teórica</div>
+    <div class="expected-products-slide__cell expected-products-slide__product">Livro ou capítulo de livro</div>
+    <div class="expected-products-slide__cell expected-products-slide__qty" style="--qty-color:#9b8cff"><strong>1</strong></div>
+    <div class="expected-products-slide__cell expected-products-slide__status"><strong>Ampliação:</strong> circulação do referencial da pesquisa.</div>
+
+    <div class="expected-products-slide__cell expected-products-slide__group">Institucionalização</div>
+    <div class="expected-products-slide__cell expected-products-slide__product">Participação em editais</div>
+    <div class="expected-products-slide__cell expected-products-slide__qty" style="--qty-color:#50fa9b"><strong>1</strong></div>
+    <div class="expected-products-slide__cell expected-products-slide__status"><strong>Continuidade:</strong> apoio e expansão da agenda de pesquisa.</div>
+
+    <div class="expected-products-slide__cell expected-products-slide__group">Internacionalização</div>
+    <div class="expected-products-slide__cell expected-products-slide__product">Intercâmbio</div>
+    <div class="expected-products-slide__cell expected-products-slide__qty" style="--qty-color:#ff5f9e"><strong>1</strong></div>
+    <div class="expected-products-slide__cell expected-products-slide__status"><strong>Rede externa:</strong> colaboração e circulação acadêmica.</div>
+
+  </div>
+</section>

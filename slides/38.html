@@ -1,0 +1,280 @@
+<section class="slide schedule-slide"
+  data-note="Apresente o cronograma como uma sequência de entregas: créditos encerram no 5º semestre, atividades contínuas atravessam o doutorado, qualificação no 6º e defesa no último.">
+  <style>
+    .schedule-slide {
+      grid-template-columns: 1fr;
+      align-content: start;
+      gap: clamp(1rem, 2vh, 1.45rem);
+      padding: 4.7vh 5.8vw 11vh;
+    }
+
+    .schedule-slide__head {
+      display: grid;
+      gap: 0.45rem;
+      max-width: 1180px;
+    }
+
+    .schedule-slide__head h2 {
+      margin: 0;
+      font-size: clamp(2.6rem, 4.4vw, 4.7rem);
+      line-height: 0.95;
+    }
+
+    .schedule-slide__head p {
+      max-width: 920px;
+      margin: 0;
+      color: color-mix(in srgb, var(--muted) 88%, white 12%);
+      font-size: clamp(1rem, 1.18vw, 1.18rem);
+      line-height: 1.45;
+    }
+
+    .schedule-slide__board {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(230px, 310px) repeat(8, minmax(64px, 1fr));
+      gap: 0.42rem;
+      width: min(100%, 1480px);
+      padding: clamp(1rem, 1.5vw, 1.35rem);
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background:
+        radial-gradient(circle at 12% 18%, rgba(96,231,255,0.11), transparent 36%),
+        radial-gradient(circle at 92% 85%, rgba(255,95,158,0.10), transparent 34%),
+        rgba(255,255,255,0.035);
+      overflow: hidden;
+    }
+
+    .schedule-slide__board::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255,255,255,0.026) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.026) 1px, transparent 1px);
+      background-size: 34px 34px;
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .schedule-slide__label,
+    .schedule-slide__sem,
+    .schedule-slide__lane {
+      position: relative;
+      z-index: 1;
+    }
+
+    .schedule-slide__label {
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      color: rgba(245,251,255,0.78);
+      font-size: clamp(0.82rem, 0.95vw, 0.98rem);
+      font-weight: 800;
+      line-height: 1.12;
+    }
+
+    .schedule-slide__label--head {
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      font-size: 0.78rem;
+    }
+
+    .schedule-slide__sem {
+      min-height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      color: #06111f;
+      background: linear-gradient(135deg, rgba(96,231,255,0.96), rgba(255,209,102,0.92));
+      font-size: 0.88rem;
+      font-weight: 950;
+      box-shadow: 0 10px 22px rgba(96,231,255,0.12);
+    }
+
+    .schedule-slide__lane {
+      min-height: 40px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.075);
+      background: rgba(255,255,255,0.035);
+    }
+
+    .schedule-slide__lane.is-on {
+      border-color: color-mix(in srgb, var(--lane-color) 62%, white 12%);
+      background:
+        linear-gradient(135deg, color-mix(in srgb, var(--lane-color) 68%, transparent), color-mix(in srgb, var(--lane-color) 30%, transparent));
+      box-shadow: 0 0 20px color-mix(in srgb, var(--lane-color) 22%, transparent);
+    }
+
+    .schedule-slide__lane.is-start {
+      border-top-left-radius: 999px;
+      border-bottom-left-radius: 999px;
+    }
+
+    .schedule-slide__lane.is-end {
+      border-top-right-radius: 999px;
+      border-bottom-right-radius: 999px;
+    }
+
+    .schedule-slide__lane.is-milestone {
+      display: grid;
+      place-items: center;
+      border-color: rgba(255,209,102,0.70);
+      background: radial-gradient(circle, rgba(255,209,102,0.92), rgba(255,95,158,0.50));
+      box-shadow: 0 0 24px rgba(255,209,102,0.24);
+    }
+
+    .schedule-slide__lane.is-milestone::after {
+      content: "✓";
+      color: #06111f;
+      font-size: 1.15rem;
+      font-weight: 950;
+    }
+
+    .schedule-slide__legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 0.2rem;
+      color: color-mix(in srgb, var(--muted) 88%, white 12%);
+      font-size: 0.88rem;
+      font-weight: 750;
+    }
+
+    .schedule-slide__legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.42rem;
+      padding: 0.38rem 0.62rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .schedule-slide__legend i {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 999px;
+      background: var(--dot);
+      box-shadow: 0 0 14px color-mix(in srgb, var(--dot) 45%, transparent);
+    }
+  </style>
+
+  <div class="schedule-slide__head">
+    <div class="kicker">Planejamento acadêmico</div>
+    <h2>Cronograma do discente</h2>
+    <p>
+      Um mapa de oito semestres conectando formação, orientação, análise, escrita e marcos formais até a defesa.
+    </p>
+  </div>
+
+  <div class="schedule-slide__board" aria-label="Cronograma do discente por semestre">
+    <div class="schedule-slide__label schedule-slide__label--head">Atividades</div>
+    <div class="schedule-slide__sem">1º</div>
+    <div class="schedule-slide__sem">2º</div>
+    <div class="schedule-slide__sem">3º</div>
+    <div class="schedule-slide__sem">4º</div>
+    <div class="schedule-slide__sem">5º</div>
+    <div class="schedule-slide__sem">6º</div>
+    <div class="schedule-slide__sem">7º</div>
+    <div class="schedule-slide__sem">8º</div>
+
+    <div class="schedule-slide__label">Créditos de disciplinas</div>
+    <div class="schedule-slide__lane is-on is-start" style="--lane-color:#60e7ff"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#60e7ff"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#60e7ff"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#60e7ff"></div>
+    <div class="schedule-slide__lane is-on is-end" style="--lane-color:#60e7ff"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+
+    <div class="schedule-slide__label">Créditos de orientação</div>
+    <div class="schedule-slide__lane is-on is-start" style="--lane-color:#9b8cff"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#9b8cff"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#9b8cff"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#9b8cff"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#9b8cff"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#9b8cff"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#9b8cff"></div>
+    <div class="schedule-slide__lane is-on is-end" style="--lane-color:#9b8cff"></div>
+
+    <div class="schedule-slide__label">Pesquisa bibliográfica</div>
+    <div class="schedule-slide__lane is-on is-start" style="--lane-color:#50fa9b"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#50fa9b"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#50fa9b"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#50fa9b"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#50fa9b"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#50fa9b"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#50fa9b"></div>
+    <div class="schedule-slide__lane is-on is-end" style="--lane-color:#50fa9b"></div>
+
+    <div class="schedule-slide__label">Obtenção de dados</div>
+    <div class="schedule-slide__lane is-on is-start is-end" style="--lane-color:#ffd166"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+
+    <div class="schedule-slide__label">Análise de dados</div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane is-on is-start" style="--lane-color:#ff5f9e"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#ff5f9e"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#ff5f9e"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#ff5f9e"></div>
+    <div class="schedule-slide__lane is-on is-end" style="--lane-color:#ff5f9e"></div>
+
+    <div class="schedule-slide__label">Proficiências</div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane is-milestone"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+
+    <div class="schedule-slide__label">Exame de qualificação</div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane is-milestone"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+
+    <div class="schedule-slide__label">Revisão e redação da tese</div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane is-on is-start" style="--lane-color:#f6a04d"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#f6a04d"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#f6a04d"></div>
+    <div class="schedule-slide__lane is-on" style="--lane-color:#f6a04d"></div>
+    <div class="schedule-slide__lane is-on is-end" style="--lane-color:#f6a04d"></div>
+
+    <div class="schedule-slide__label">Defesa da tese</div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane"></div>
+    <div class="schedule-slide__lane is-milestone"></div>
+  </div>
+
+  <div class="schedule-slide__legend">
+    <span><i style="--dot:#60e7ff"></i> formação</span>
+    <span><i style="--dot:#50fa9b"></i> pesquisa contínua</span>
+    <span><i style="--dot:#ff5f9e"></i> análise</span>
+    <span><i style="--dot:#f6a04d"></i> escrita</span>
+    <span><i style="--dot:#ffd166"></i> marcos formais</span>
+  </div>
+</section>

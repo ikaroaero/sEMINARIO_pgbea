@@ -1,0 +1,213 @@
+<section class="slide te-method-slide"
+  data-stage-count="2"
+  data-note="Apresente a variável angular, depois as janelas temporais e, no último clique, justifique a rede com base em Ji et al. (2019): TE assimétrica, spillover direcional e interpretação sistêmica por centralidade/MST.">
+
+  <div class="te-method-slide__stage te-method-slide__stage--variable">
+    <div class="te-method-slide__hero">
+      <div class="kicker">Transfer Entropy · metodologia</div>
+      <h2>Variável a ser analisada</h2>
+      <p class="te-method-slide__subtitle">
+        A série usada na TE resume como cada peixe <span class="accent">reorienta sua direção</span>
+        ao longo do tempo. Em vez da posição acumulada, usamos a mudança angular entre vetores
+        velocidade consecutivos.
+      </p>
+    </div>
+
+    <div class="te-method-slide__variable-grid">
+      <div class="card te-method-slide__variable-copy">
+        <div class="te-method-slide__label">série angular individual</div>
+        <p class="te-method-slide__big">
+          Para cada peixe, a variável é o giro entre duas velocidades consecutivas.
+        </p>
+
+        <div class="te-method-slide__rotation-pair" aria-label="Vetores comparados para calcular a rotação angular">
+          <span>\(v_i(t)\)</span>
+          <strong>→</strong>
+          <span>\(v_i(t+\Delta t)\)</span>
+        </div>
+
+        <div class="te-method-slide__insight">
+          <strong>\(\phi_i(t)\)</strong>
+          <span>destaca as transições dinâmicas e preserva a informação direcional relevante para a Transfer Entropy.</span>
+        </div>
+
+        <div class="te-method-slide__math">
+          <span class="te-method-slide__math-caption">medida angular</span>
+          \[
+            \phi_i(t)=\arctan2
+            \left(\lVert v_i(t)\times v_i(t+\Delta t)\rVert,\;
+            v_i(t)\cdot v_i(t+\Delta t)\right)
+          \]
+        </div>
+      </div>
+
+      <div class="card te-method-slide__variable-visual">
+        <div class="te-method-slide__label">representação geométrica</div>
+        <svg class="te-method-slide__phi-svg" viewBox="0 0 620 380" role="img" aria-label="Ângulo phi entre vetores de velocidade consecutivos">
+          <defs>
+            <marker id="te-method-arrow-now" markerWidth="10" markerHeight="10" refX="8.4" refY="5" orient="auto" markerUnits="strokeWidth">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#67d8ff"></path>
+            </marker>
+            <marker id="te-method-arrow-next" markerWidth="10" markerHeight="10" refX="8.4" refY="5" orient="auto" markerUnits="strokeWidth">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff7aae"></path>
+            </marker>
+          </defs>
+          <g class="te-method-slide__phi-gridlines">
+            <line x1="40" y1="0" x2="40" y2="380"></line>
+            <line x1="88" y1="0" x2="88" y2="380"></line>
+            <line x1="136" y1="0" x2="136" y2="380"></line>
+            <line x1="184" y1="0" x2="184" y2="380"></line>
+            <line x1="232" y1="0" x2="232" y2="380"></line>
+            <line x1="280" y1="0" x2="280" y2="380"></line>
+            <line x1="328" y1="0" x2="328" y2="380"></line>
+            <line x1="376" y1="0" x2="376" y2="380"></line>
+            <line x1="424" y1="0" x2="424" y2="380"></line>
+            <line x1="472" y1="0" x2="472" y2="380"></line>
+            <line x1="520" y1="0" x2="520" y2="380"></line>
+            <line x1="568" y1="0" x2="568" y2="380"></line>
+            <line x1="0" y1="36" x2="620" y2="36"></line>
+            <line x1="0" y1="84" x2="620" y2="84"></line>
+            <line x1="0" y1="132" x2="620" y2="132"></line>
+            <line x1="0" y1="180" x2="620" y2="180"></line>
+            <line x1="0" y1="228" x2="620" y2="228"></line>
+            <line x1="0" y1="276" x2="620" y2="276"></line>
+            <line x1="0" y1="324" x2="620" y2="324"></line>
+          </g>
+          <line class="te-method-slide__phi-axis" x1="104" y1="286" x2="398" y2="286"></line>
+          <line class="te-method-slide__phi-axis" x1="104" y1="286" x2="104" y2="92"></line>
+          <line class="te-method-slide__phi-vector te-method-slide__phi-vector--now" x1="104" y1="286" x2="386" y2="286" marker-end="url(#te-method-arrow-now)"></line>
+          <line class="te-method-slide__phi-vector te-method-slide__phi-vector--next" x1="104" y1="286" x2="266" y2="158" marker-end="url(#te-method-arrow-next)"></line>
+          <path class="te-method-slide__phi-arc" d="M 174 286 A 70 70 0 0 0 157 240"></path>
+          <text class="te-method-slide__phi-tag te-method-slide__phi-tag--now" x="296" y="270">v(t)</text>
+          <text class="te-method-slide__phi-tag te-method-slide__phi-tag--next" x="276" y="136">v(t+Δt)</text>
+          <text class="te-method-slide__phi-tag te-method-slide__phi-tag--phi" x="160" y="250">φ(t)</text>
+        </svg>
+        <div class="te-method-slide__phi-footer">
+          <span><i class="is-now"></i> direção atual</span>
+          <span><i class="is-next"></i> próxima direção</span>
+          <span><i class="is-angle"></i> reorientação angular</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="te-method-slide__stage te-method-slide__stage--windows">
+    <div class="te-method-slide__hero te-method-slide__hero--compact">
+      <div class="kicker">Transfer Entropy · janelas temporais</div>
+      <h2>Leitura em janelas</h2>
+      <p class="te-method-slide__subtitle">
+        A TE compara o <span class="accent">futuro de X</span> com as memórias recentes de
+        <span class="accent">X</span> e <span class="accent">Y</span>. Para isso, a série é lida
+        por janelas temporais locais.
+      </p>
+    </div>
+
+    <div class="te-window-stage te-method-slide__window-params">
+      <div class="card te-window-stage__params">
+        <div class="te-window-stage__param-card">
+          <div class="te-window-stage__param-symbol">\(w\) / box</div>
+          <h3>30 segundos <small>(900 pontos)</small></h3>
+          <div class="te-window-stage__mini te-window-stage__mini--w" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <p>
+            A janela precisa reunir pontos suficientes para a estimativa da TE fazer sentido.
+            Por isso usamos <span class="yellow">box = 30 s</span>.
+          </p>
+        </div>
+
+        <div class="te-window-stage__param-card">
+          <div class="te-window-stage__param-symbol">\(\tau\)</div>
+          <h3>0,5 segundo <small>(15 pontos)</small></h3>
+          <div class="te-window-stage__mini te-window-stage__mini--tau" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <p>
+            O passo temporal foi definido como <span class="yellow">\(\tau = 0{,}5\,s\)</span>,
+            compatível com a escala de reação e batimento cardíaco do peixe.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="te-method-slide__stage te-method-slide__stage--architecture">
+    <div class="cn-wrap">
+      <div class="cn-kicker">Transfer Entropy + Redes Complexas</div>
+      <div class="cn-head">
+        <h2 class="cn-title">A TE mede pares.<br><span>A rede revela o cardume.</span></h2>
+        <p class="cn-subtitle">
+          Inspirado em Ji et al. (2019): a Transfer Entropy estima rela&ccedil;&otilde;es locais e direcionais.
+          A an&aacute;lise de redes transforma essas rela&ccedil;&otilde;es em uma leitura coletiva:
+          <strong>organiza&ccedil;&atilde;o, propaga&ccedil;&atilde;o de informa&ccedil;&atilde;o e integra&ccedil;&atilde;o do grupo.</strong>
+        </p>
+      </div>
+
+      <div class="cn-board">
+        <div class="cn-main-flow" aria-label="Conversão da matriz de Transfer Entropy em rede complexa">
+          <div class="cn-panel cn-panel--matrix">
+            <div class="cn-tag">Fase 01 · Rela&ccedil;&otilde;es locais</div>
+            <h3>A matriz de influ&ecirc;ncia</h3>
+            <p>
+              Cada c&eacute;lula representa quanto o comportamento de um peixe ajuda a reduzir
+              a incerteza sobre o movimento futuro de outro. &Eacute; a medida par-a-par da
+              influ&ecirc;ncia informacional.
+            </p>
+            <div class="cn-matrix" aria-hidden="true">
+              <span></span><span class="is-hot"></span><span></span><span class="is-mid"></span><span></span>
+              <span class="is-mid"></span><span></span><span class="is-hot"></span><span></span><span></span>
+              <span></span><span></span><span></span><span class="is-hot"></span><span class="is-mid"></span>
+              <span class="is-hot"></span><span></span><span></span><span></span><span></span>
+              <span></span><span class="is-mid"></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="cn-transform">
+            <span>par &rarr; rede</span>
+            <strong>\(\Rightarrow\)</strong>
+            <small>\(TE_{i\to j}\)</small>
+            <span>sistema coletivo</span>
+          </div>
+
+          <div class="cn-panel cn-panel--network">
+            <div class="cn-tag">Fase 02 · Estrutura global</div>
+            <h3>O grafo do cardume</h3>
+            <p>
+              Cada peixe vira um n&oacute;. Cada rela&ccedil;&atilde;o informacional vira uma conex&atilde;o.
+              Assim, a TE deixa de ser apenas uma tabela e passa a mostrar a arquitetura
+              din&acirc;mica do grupo.
+            </p>
+            <div class="cn-network-viz" aria-hidden="true">
+              <svg viewBox="0 0 420 205" preserveAspectRatio="none">
+                <path class="cn-edge" d="M58,55 C90,30 125,42 158,82"></path>
+                <path class="cn-edge cn-edge--hot" d="M158,82 C138,120 116,145 98,158"></path>
+                <path class="cn-edge" d="M98,158 C55,130 45,95 58,55"></path>
+                <path class="cn-edge" d="M158,82 C210,62 250,65 292,80"></path>
+                <path class="cn-edge cn-edge--soft" d="M292,80 C322,110 342,132 365,150"></path>
+                <path class="cn-edge cn-edge--hot" d="M98,158 C185,188 280,185 365,150"></path>
+                <circle class="cn-svg-node" cx="58" cy="55" r="8"></circle>
+                <circle class="cn-svg-node cn-svg-node--core" cx="158" cy="82" r="13"></circle>
+                <circle class="cn-svg-node" cx="98" cy="158" r="8"></circle>
+                <circle class="cn-svg-node" cx="292" cy="80" r="8"></circle>
+                <circle class="cn-svg-node" cx="365" cy="150" r="8"></circle>
+              </svg>
+            </div>
+
+            <div class="cn-insight-list">
+              <span><strong>Arquitetura</strong>Quem se conecta com quem.</span>
+              <span><strong>Propaga&ccedil;&atilde;o</strong>Como a informa&ccedil;&atilde;o circula.</span>
+              <span><strong>Integra&ccedil;&atilde;o</strong>Qu&atilde;o coletivo &eacute; o movimento.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cn-closing-container">
+        A rede &eacute; a linguagem que transforma v&aacute;rias rela&ccedil;&otilde;es locais de
+        <strong>Transfer Entropy</strong> em uma leitura global do comportamento coletivo.
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto de Tese - Entropia, Cardumes e Inteligência Emergente</title>
+  <link rel="stylesheet" href="style.css?v=20260512-references-after-schedule" />
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\\[', '\\]']],
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      },
+      svg: {
+        fontCache: 'global',
+      },
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <main class="deck" id="deck"></main>
+
+  <aside class="notes" id="notes">
+    <h3>Notas do apresentador</h3>
+    <p id="noteText"></p>
+  </aside>
+
+  <footer class="prompt">
+    <div class="controls">
+      <button onclick="prevSlide()">← Voltar</button>
+      <button onclick="nextSlide()">Avançar →</button>
+      <button onclick="toggleNotes()">Notas</button>
+    </div>
+    <div class="progress"><div class="bar" id="bar"></div></div>
+    <div class="prompt__jump">
+      <span id="counter"></span>
+      <label class="sr-only" for="slideJump">Ir para o slide</label>
+      <select id="slideJump" aria-label="Ir para o slide"></select>
+    </div>
+  </footer>
+
+  <script src="script.js?v=20260512-references-after-schedule"></script>
+</body>
+</html>

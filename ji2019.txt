@@ -1,0 +1,832 @@
+                                                                            Energy Economics 81 (2019) 1042–1055
+
+
+
+                                                                       Contents lists available at ScienceDirect
+
+
+                                                                            Energy Economics
+
+                                                     journal homepage: www.elsevier.com/locate/eneeco
+
+
+
+
+Information interdependence among energy, cryptocurrency and major
+commodity markets
+Qiang Ji a,b,c, Elie Bouri d,⁎, David Roubaud e, Ladislav Kristoufek f
+a
+  Business School, Shandong Normal University, Jinan, Shandong, 250014, China
+b
+   Institutes of Science and Development, Chinese Academy of Sciences, Beijing 100190, China
+c
+  School of Public Policy and Management, University of Chinese Academy of Sciences, Beijing 100049, China
+d
+   Holy Spirit University of Kaslik, Lebanon
+e
+   Montpelier Business School, Montpelier, France
+f
+  Institute of Economic Studies, Faculty of Social Sciences, Charles University, Prague, Czech Republic
+
+
+
+a r t i c l e           i n f o                               a b s t r a c t
+
+Article history:                                              The relationship between conventional and digital assets has become a prominent research topic, a focus partially
+Received 10 February 2019                                     emerging from the establishment of some large cryptocurrencies as legitimate ﬁnancial assets. In this paper, we
+Received in revised form 13 May 2019                          examine the information interdependence among various commodities—such as energy, metals and agricultural
+Accepted 8 June 2019
+                                                              commodities—and leading cryptocurrencies. We use a time-varying entropy-based approach to identify the di-
+Available online 14 June 2019
+                                                              rection of return spillovers, and the results show that the nature of information spillovers changes over time,
+Keywords:
+                                                              with cryptocurrencies becoming more connected and more prominent within the system; in contrast, the role
+Transfer entropy                                              of energy commodities is dependent on their price dynamics. We also apply a minimum spanning tree (MST)
+Commodity market                                              and various centrality measures, which reveal that agricultural and energy commodities form the core of the
+Cryptocurrency                                                commodities network. The basic skeleton of the network remains rather stable over time even though the de-
+Information spillover                                         tailed connections are rather volatile. Our ﬁndings generally suggest that cryptocurrencies are integrated within
+Integration                                                   broadly-deﬁned commodity markets.
+                                                                                                                                         © 2019 Elsevier B.V. All rights reserved.
+
+
+
+
+1. Introduction                                                                                       From a theoretical point of view, different channels and factors
+                                                                                                  which have been previously identiﬁed in the literature on inter-
+    With the emergence of Bitcoin as an investment option due to its                              market relationships may play a role in forming a connection between
+tradability as a unit of value, a heated debate has ensued over whether                           the cryptocurrency market and the commodity markets. The ﬁrst
+this prominent digital coin is a currency, a commodity or a synthetic                             among these is the correlated-information channel (Kodres and
+commodity (Yermack, 2013; Lo and Wang, 2014; Polasik et al., 2015;                                Pritsker, 2002), through which connections occur via the price-
+Popper, 2015; Selgin, 2015; Blau, 2017).1 Some studies have revealed                              discovery process. The second is the risk premium channel, through
+evidence of a weak connection between Bitcoin and commodities such                                which a shock in one market may adversely affect the willingness of
+as gold and crude oil (Bouri et al., 2018a, 2018b; Ji et al., 2018a).2                            market participants to hold risk in any market (Acharya and Pedersen,
+With the development of new cryptocurrencies other than Bitcoin, the                              2005). Both channels can be relevant to the case of cryptocurrencies
+debate has only intensiﬁed.3 Still, it is not clear whether the diversiﬁed                        and commodities. Interestingly, some prior studies highlight an associ-
+cryptocurrency market that now consists of various leading                                        ation between the commodity markets and the cryptocurrency market,
+cryptocurrencies—such as Ethereum, Ripple, Stellar and Litecoin—is                                as represented by Bitcoin, while providing additional theoretical under-
+connected or disconnected from the commodity markets (e.g., for en-                               pinnings and reasons for this. Hayes (2017) indicates a possible linkage
+ergy, metals and agricultural commodities).                                                       between energy and Bitcoin markets based on the rationale that energy,
+                                                                                                  in the form of electricity, is the main cost of Bitcoin production (i.e., for
+  ⁎ Corresponding author.                                                                         mining).4 Particularly, the discussions in Bouri et al. (2018b) and
+     E-mail address: eliebouri@usek.edu.lb (E. Bouri).                                            Shahzad et al. (2019) provide interesting arguments that clarify the
+  1
+     For example, Selgin (2015) indicates that Bitcoin combines features of commodities           need for and appropriateness of studying the connection between
+(e.g., gold) and ﬁat currencies.                                                                  Bitcoin and commodity markets. Other studies examine potential
+  2
+     Ji et al. (2018a) also report evidence of instability in the relationship through an anal-
+ysis across sub-sample periods.
+  3                                                                                                 4
+     Most cryptocurrencies are based on the backbone of Bitcoin, which is blockchain                  Bouri et al. (2017) also build on the rationale of Hayes (2017) and provide evidence
+technology.                                                                                       that Bitcoin and energy commodities move more in tandem after December 2013.
+
+
+
+https://doi.org/10.1016/j.eneco.2019.06.005
+0140-9883/© 2019 Elsevier B.V. All rights reserved.
+                                                                 Q. Ji et al. / Energy Economics 81 (2019) 1042–1055                                               1043
+
+
+associations among commodities and Bitcoin arising from the similarity                           Our empirical analysis is essential reading for policymakers who are
+of some characteristics of cryptocurrencies and metals commodities                           concerned with the stability of ﬁnancial markets. Evidence of increased
+(e.g., gold). For example, Henriques and Sadorsky (2018), Klein et al.                       or unstable interdependence between the commodity and
+(2018), Selmi et al. (2018) and Shahzad et al. (2019) compare the vir-                       cryptocurrency markets suggests the need for continuous monitoring
+tues of gold and Bitcoin; however, these studies provide mixed evidence                      of the connectedness network for the sake of different economic actors.
+and results.                                                                                 Our empirical analysis also has implications that go beyond
+    Most of the existing research still focuses on the interdependent re-                    policymakers, affecting investors and risk managers. Increasing con-
+lationship among commodity markets and between commodity and ﬁ-                              nectedness between commodity and cryptocurrency markets weakens
+nancial markets (Wang et al., 2018; Ma et al., 2019a, 2019b, 2019c;                          the attractiveness of portfolio diversiﬁcation across these markets. As
+Zhang and Broadstock, 2018; Zhang et al., 2019), while the relationship                      for evidence of signiﬁcant time variability in the interdependence be-
+between the cryptocurrency market and commodity markets has been                             tween various commodities and cryptocurrencies, our analysis may
+given increasing attention by researchers of late. Previous studies have                     suggest that market participants should maintain a perspective of dy-
+shown that commodities enjoy a strong network structure that is also                         namic hedging or periodic rebalancing. This is important in light of ear-
+intertwined with ﬁnancial assets. Kristoufek et al. (2012) were the                          lier ﬁndings about the importance of combining Bitcoin with
+ﬁrst to study the properties of commodity market networks. Even                              commodities to reduce risk and maximise returns (e.g., Bouri et al.,
+though their study primarily focuses on the place of biofuels in the net-                    2017).
+works, Kristoufek et al. (2012) show not only that the separations be-                           The major empirical results arising from our empirical analyses are
+tween clusters can be very clear but also that they can vary in time                         as follows. First, we show that energy and agricultural commodities
+considerably. Regarding more recent studies, Filip et al. (2016) study a                     are the driving forces of the whole system, both from the perspective
+network of 33 assets covering commodities (including energy, agricul-                        of spillovers and from the network perspective. Second,
+tural and fuel commodities), stock indices, interest rates and exchange                      cryptocurrencies are not detached from the system and are more con-
+rates and mostly conﬁrm the qualitative results of Kristoufek et al.                         nected to the global commodity markets than are metals (including
+(2012), but on a larger scale.                                                               gold). Third, cryptocurrencies are not strongly affected by energy com-
+    Two observations are noteworthy from the existing literature on                          modities, which goes against the basic idea that electricity prices form
+cryptocurrencies (e.g., Bitcoin) and commodities (e.g., gold and crude                       an important part of cryptocurrency production costs. We argue that
+oil). The ﬁrst is that in the existing studies beginning with Hayes                          this is connected to the development of the cryptocurrency mining mar-
+(2017) and ending with Shahzad et al. (2019), Bitcoin is considered                          ket, which reacted only slowly to the surge of 2017. Fourth,
+the sole representative of the cryptocurrency market. Consequently,                          cryptocurrencies become more connected to and more important
+they disregard other leading cryptocurrencies, such as Ethereum, Rip-                        within the overall network over time. Fifth, energy commodities be-
+ple, Stellar and Litecoin, which have recently eroded the dominance of                       come less important over time as they are evidently connected to the
+Bitcoin in the cryptocurrency market5; these cryptocurrencies have be-                       price dynamics of crude oil as a representative commodity. And sixth,
+come alternative digital investments that are attracting the attention of                    we discuss the implications of these results for portfolio management,
+scholars focusing on the relationship between the leading players in the                     arguing that the role of cryptocurrencies as diversiﬁers is not necessarily
+cryptocurrency market (Brauneis and Mestel, 2018; Ji et al., 2018b;                          as strong as is commonly believed, at least during times of general asset
+Koutmos, 2018). The year 2017 was not only the year of Bitcoin and                           appreciation.
+its unprecedented appreciation but also the year of the so-called                                The rest of the paper is structured as follows. Section 2 describes the
+altcoins—coins derived from the core Bitcoin features as well as other                       methods that we use, namely the connectedness approach based on en-
+original coins and derived tokens (ﬁrst and foremost, the case of                            tropy, the MSTs and various centrality measures. Section 3 provides em-
+Ethereum and its smart-contract-based tokens). This enlarged the                             pirical results and a detailed discussion in the light of prior studies.
+pool of cryptoassets (i.e., coins and tokens) appropriate and useful for ﬁ-                  Section 4 offers concluding remarks and directions for future research.
+nancial analysis that we are able to make use of in our analysis. The sec-
+ond noteworthy observation is that most prior studies that examine the                       2. Methods
+relationship between commodities and Bitcoin do not look at the time
+variability in that relationship (e.g., Ji et al., 2018a) despite empirical ev-                 Network-based modelling has recently come into common use as a
+idence that the inter-market relationships among conventional assets                         methodological framework to investigate information transmission
+are rather dynamic, which necessitates a thorough examination of the                         and systemic risk in the energy and ﬁnancial ﬁelds (Diebold and
+time-varying networks of connectedness between commodities and                               Yilmaz, 2014; Ji and Fan, 2016; Ji et al., 2018c; Zhang, 2017; Zhang
+Bitcoin and, thus, among various commodities and cryptocurrencies.                           and Broadstock, 2018). The biggest advantage of the network analysis
+    In this context, the aim of this paper is to examine information spill-                  approach is that it can efﬁciently present a clear dependence structure
+overs (i.e., interdependence) and market integration among various                           and intuitively reﬂect the complex information linkages among assets.
+commodities and cryptocurrencies. Our dataset covers three groups of                         The key point of network modelling is to build the pairwise linkages be-
+commodities—energy, metals and agricultural commodities—and                                  tween assets. The most frequently used measures are summarised
+their individual commodity components, as well as ﬁve leading                                below.
+cryptocurrencies (Bitcoin, Ethereum, Ripple, Stellar and Litecoin).                             Billio et al. (2012) propose using Granger causality networks to
+    With regard to methodology, we use an entropy-based network ap-                          study connectedness and systemic risk in the ﬁnance and insurance sec-
+proach to capture the direction of spillovers within the information net-                    tors. They afﬁrm that Granger causality can accurately measure the pre-
+work, from both static and dynamic perspectives. We apply minimum                            dictive relationship between the past values of one variable and the
+spanning trees (MST) to capture the intensity of such spillovers and                         future values of another, which is a simple measure of unconditional
+the stability and evolution of the integration structure for the informa-                    correlation (Castagneto-Gissey et al., 2014). However, the signiﬁcance
+tion ﬂow. We also use several network indicators (degree centrality,                         of Granger causality heavily depends on the selected number of lags,
+closeness centrality and betweenness centrality) to identify the impor-                      which may be inconsistent for different pairs of assets. Moreover,
+tance of each variable being studied within the global information ﬂow.                      Granger causality networks are measured as unweighted networks,
+                                                                                             meaning they cannot investigate the magnitude of information trans-
+                                                                                             mission among assets.
+  5
+    For example, the market share of Bitcoin decreased from more than 80% in early 2017         Another popular approach was recently developed by Diebold and
+to 45% in the last quarter of 2018.                                                          Yilmaz (2014), who build a connectedness network employing the
+1044                                                                Q. Ji et al. / Energy Economics 81 (2019) 1042–1055
+
+
+Table 1
+Summary statistics of asset returns.
+
+                                            Mean          Std.Dev        Skewness         Kurtosis       Risk adjusted returns     Jarque-Bera        ADF test          PP test
+
+                        Bitcoin             0.395         4.609          −0.184           7.677          0.086                     750.025***         −27.833***        −27.859***
+                        Ethereum            0.706         8.390          0.733            8.353          0.084                     1050.066***        −26.013***        −26.013***
+  Cryptocurrency        Ripple              0.504         8.402          2.490            18.800         0.060                     9353.356***        −16.331***        −25.514***
+                        Stellar             0.569         10.376         3.347            37.409         0.055                     41,881.720***      −26.914***        −26.985***
+                        Litecoin            0.339         6.828          1.582            16.221         0.050                     6298.512***        −26.137***        −26.132***
+                        Gold                0.008         0.807          0.221            6.426          0.010                     406.733***         −29.052***        −26.061***
+                        Silver              −0.009        1.413          −0.394           6.153          −0.006                    359.956***         −30.487***        −30.429***
+  Metals                Aluminium           −0.009        1.461          0.593            12.666         −0.006                    3232.469***        −29.364***        −29.352***
+                        Copper              −0.001        1.642          0.359            14.280         −0.001                    4354.021***        −29.417***        −29.417***
+                        Nickel              −0.008        2.343          0.090            10.892         −0.003                    2123.715***        −29.797***        −29.803***
+                        Natural Gas         0.009         2.577          −0.002           5.392          0.003                     194.962***         −28.901***        −28.902***
+                        Heating Oil         0.000         2.223          0.355            7.689          0.000                     766.657***         −30.346***        −31.675***
+  Energy
+                        Unleaded Gas        0.006         2.259          0.413            7.901          0.003                     841.871***         −28.690***        −29.279***
+                        Crude Oil           0.058         2.290          0.309            5.407          0.025                     210.525***         −29.993***        −29.994***
+                        Live Cattle         −0.035        1.443          −2.444           24.438         −0.024                    16,478.850***      −26.903***        −26.884***
+                        Cocoa               −0.018        2.298          0.183            14.598         −0.008                    4589.531***        −29.368***        −29.371***
+                        Coffee              −0.024        2.088          1.370            23.446         −0.011                    14,503.990***      −26.462***        −26.585***
+                        Corn                −0.005        1.771          1.444            25.445         −0.003                    17,454.570***      −28.440***        −29.034***
+                        Cotton              −0.016        1.766          −1.858           22.876         −0.009                    13,934.850***      −27.254***        −27.241***
+  Agricultural
+                        Lean Hogs           −0.013        2.524          1.696            29.730         −0.005                    24,744.970***      −28.644***        −29.436***
+                        Orange Juice        −0.030        2.593          −0.070           19.145         −0.012                    8885.038***        −26.860***        −26.839***
+                        Soybeans            −0.010        1.727          0.081            16.153         −0.006                    5897.060***        −28.768***        −28.874***
+                        Wheat               −0.005        2.438          0.730            30.274         −0.002                    25,426.870***      −27.889***        −27.953***
+                        Sugar               −0.013        2.278          0.162            9.832          −0.006                    1594.346***        −28.351***        −28.402***
+
+Note: This table presents the summary statistics of the daily returns of the variables under study. The sample period is from 15 August 2015 to 27 September 2018. The Jarque–Bera sta-
+tistics test nulls the hypothesis that the distribution of each return series is Gaussian. *** denotes signiﬁcance at 1% level.
+
+
+
+vector autoregressive model (VAR) and the generalised forecasting                                  Let us consider a discrete and stationary process, I(t), with p(i) being
+error variance decomposition (FEVD) method. This is based on the sim-                           the prior probability of i. Then, according to Shannon, the average num-
+ple idea of reorganising the FEVD results to provide an intuitive way to                        ber of bits needed to optimally encode I(t) without taking into account
+interpret the VAR results, which has been widely used in the ﬁeld of en-                        possible correlations is given by
+ergy ﬁnance (Luo and Ji, 2018). However, the VAR model is limited by
+                                                                                                                                   X
+the number of sample variables and cannot deal with high-                                       H ðIÞ ¼ H ðp1 ; p2 ; …; pk Þ ¼ −       pðiÞ logpðiÞ                                ð1Þ
+dimensional network issues.                                                                                                        i
+    Other methodologies such as conditional value at risk (CoVaR) and
+similar approaches can accurately estimate the risk spillovers between                          where H(I) is called Shannon entropy.
+two assets (Ji et al., 2018d, 2019) but suffer from complexity issues re-                          Then, the difference between the Shannon entropy of neighbouring
+garding the coefﬁcient estimation process. More importantly, such ap-                           orders constitutes the conditional entropy:
+proaches lack a clear deﬁnition extending them from pairwise to
+network-level analysis.                                                                         hðIðmÞÞ ¼ H ðI ðm þ 1ÞÞ−H ðI ðmÞÞ                                                  ð2Þ
+    In this paper, we employ the transfer entropy approach, which
+avoids the limitations of the above-mentioned studies, speciﬁcally the                          where h(I(m)) denotes the average amount of information transmitted
+curse of dimensionality and coefﬁcient estimation complexity. The                               by the latest observation I(m + 1), given that the last m observations of I
+transfer entropy approach is ﬂexible in dealing with asymmetric and                             are known and their information has been completely exploited. Then, h
+nonlinear processes (Altiparmak and Dengiz, 2009; Bekiros et al.,                               (I(m)) can be rewritten as
+2017). In addition, the transfer entropy approach has speciﬁc advan-
+tages in measuring information spillovers among assets as it can be eas-                                        X                                         
+                                                                                                hðIðmÞÞ ¼ −      p i1 ; i2; …; imþ1 logp imþ1 i1 ; i2; …; im                      ð3Þ
+ily estimated and it ignores variable dimension issues. Particularly, the
+transfer entropy between two variables is generally asymmetric,
+which can provide useful information on the spillover direction be-                             where p(im+1|i1,i2,…, im) = p(i1,i2,…, im, im+1)/p(i1, i2,…,im) explains the
+tween variables. In this section, we extend the pairwise transfer entropy                       concept of conditional entropy.
+estimation to a network analysis with reference to Diebold and Yilmaz's                             When we extend the concept of conditional entropy to two different
+(2014) idea of the connectedness framework. We build new network                                sequences, transfer entropy is employed to measure the information
+construction rules by converting pairwise transfer entropy into a direc-                        ﬂow from one stationary Markov process to another. Let X be a station-
+tional transfer entropy spillover network (details can be seen in                               ary Markov process of order k; then, the probability of X at time t + 1 is
+Subsection 2.2.1). In the constructed network, the transmission chan-                           conditional on k previous observations, that is, p(xt+1|xt, … , xt−k+1) = p
+nels and direction of information spillover can be intuitively explored.                        (xt+1|xt, … , xt−k). The measure of information ﬂow from process Y to X
+The following section contains the detailed modelling procedure for                             can then be quantiﬁed as the deviation from the following generalised
+the transfer entropy approach.                                                                  Markov property: p(it+1|i(k)              (k) (l)
+                                                                                                                           t ) = p(it+1|it , jt ).
+                                                                                                    The transfer entropy that relates k previous samples of process X and
+                                                                                                l previous samples of process Y is deﬁned as follows:
+2.1. Transfer entropy
+                                                                                                                                                   
+                                                                                                                                            ðkÞ ðlÞ
+   Transfer entropy, originally introduced by Schreiber (2000), can                                            X         ðkÞ ðlÞ
+                                                                                                                                   p itþ1 it ; jt
+                                                                                                T Y→X ðk; lÞ ¼  p itþ1 ; it ; jt log                                            ð4Þ
+measure the directionality of a variable with respect to time, based on                                                                        ðkÞ
+                                                                                                                                     p itþ1 it
+the theory of information proposed by Shannon (1948).
+Table 2
+Information spillover among energy, cryptocurrencies and commodity markets.
+
+         1        2       3       4        5       6       7        8       9          10        11         12        13         14         15        16         17        18       19      20        21         22      23         24         From
+
+  1               0.17    0.12    0.17     0.19    0.11    0.16     0.17    0.21       0.17      0.21       0.15      0.21       0.23       0.22      0.15       0.18      0.21     0.16    0.18      0.21       0.24    0.19       0.16       4.19
+  2      0.10             0.11    0.10     0.09    0.13    0.16     0.11    0.14       0.17      0.16       0.12      0.15       0.13       0.15      0.12       0.24      0.18     0.18    0.13      0.13       0.13    0.17       0.17       3.26
+  3      0.12     0.12            0.15     0.20    0.17    0.19     0.17    0.18       0.20      0.17       0.20      0.24       0.16       0.15      0.18       0.22      0.20     0.18    0.18      0.21       0.21    0.14       0.20       4.15
+  4      0.11     0.12    0.14             0.12    0.14    0.22     0.18    0.11       0.17      0.07       0.13      0.15       0.18       0.14      0.15       0.13      0.20     0.15    0.16      0.12       0.16    0.10       0.18       3.32
+
+
+
+
+                                                                                                                                                                                                                                                          Q. Ji et al. / Energy Economics 81 (2019) 1042–1055
+  5      0.16     0.16    0.18    0.15             0.08    0.18     0.17    0.14       0.14      0.18       0.12      0.12       0.15       0.14      0.16       0.17      0.18     0.13    0.19      0.12       0.18    0.19       0.15       3.52
+  6      0.11     0.15    0.22    0.21     0.18            0.04     0.02    0.03       0.04      0.10       0.04      0.02       0.05       0.05      0.02       0.08      0.05     0.03    0.04      0.06       0.06    0.01       0.05       1.65
+  7      0.23     0.30    0.20    0.24     0.28    0.02             0.07    0.08       0.11      0.17       0.07      0.11       0.21       0.12      0.14       0.08      0.12     0.11    0.16      0.05       0.09    0.13       0.17       3.26
+  8      0.24     0.22    0.19    0.23     0.15    0.03    0.10             0.05       0.11      0.13       0.08      0.12       0.15       0.06      0.09       0.10      0.02     0.09    0.10      0.14       0.10    0.08       0.11       2.69
+  9      0.22     0.23    0.24    0.26     0.23    0.07    0.12     0.07               0.16      0.14       0.19      0.12       0.19       0.07      0.17       0.09      0.04     0.06    0.13      0.10       0.07    0.05       0.12       3.14
+  10     0.26     0.22    0.26    0.28     0.21    0.08    0.19     0.15    0.18                 0.23       0.19      0.20       0.22       0.16      0.20       0.20      0.19     0.15    0.18      0.23       0.17    0.20       0.20       4.58
+  11     0.20     0.20    0.23    0.23     0.22    0.19    0.23     0.22    0.24       0.21                 0.26      0.30       0.28       0.24      0.25       0.27      0.27     0.27    0.28      0.32       0.26    0.24       0.25       5.66
+  12     0.20     0.21    0.25    0.22     0.22    0.09    0.15     0.20    0.15       0.25      0.22                 0.10       0.17       0.19      0.23       0.21      0.15     0.18    0.17      0.18       0.16    0.17       0.21       4.29
+  13     0.22     0.26    0.30    0.29     0.27    0.13    0.20     0.14    0.15       0.22      0.26       0.09                 0.16       0.22      0.19       0.17      0.15     0.20    0.21      0.22       0.14    0.24       0.22       4.66
+  14     0.27     0.24    0.21    0.20     0.28    0.13    0.16     0.14    0.20       0.24      0.24       0.08      0.10                  0.22      0.29       0.23      0.17     0.15    0.24      0.20       0.17    0.27       0.24       4.67
+  15     0.13     0.22    0.26    0.30     0.23    0.07    0.11     0.08    0.13       0.13      0.21       0.10      0.20       0.14                 0.23       0.12      0.09     0.08    0.18      0.16       0.11    0.12       0.13       3.53
+  16     0.21     0.22    0.24    0.26     0.22    0.17    0.20     0.13    0.19       0.29      0.24       0.23      0.21       0.26       0.18                 0.15      0.14     0.16    0.25      0.30       0.15    0.13       0.19       4.70
+  17     0.28     0.19    0.26    0.31     0.26    0.06    0.10     0.14    0.14       0.22      0.23       0.24      0.19       0.23       0.20      0.18                 0.12     0.17    0.20      0.21       0.15    0.26       0.24       4.56
+  18     0.19     0.17    0.23    0.21     0.12    0.05    0.13     0.06    0.04       0.09      0.19       0.15      0.10       0.09       0.04      0.12       0.11               0.03    0.11      0.14       0.09    0.07       0.11       2.63
+  19     0.20     0.21    0.19    0.20     0.20    0.08    0.12     0.03    0.10       0.09      0.18       0.09      0.16       0.12       0.03      0.14       0.09      0.10             0.12      0.06       0.09    0.08       0.12       2.80
+  20     0.23     0.20    0.24    0.24     0.27    0.12    0.14     0.11    0.12       0.22      0.28       0.21      0.24       0.20       0.19      0.22       0.22      0.19     0.13              0.26       0.14    0.23       0.20       4.62
+  21     0.24     0.20    0.26    0.23     0.23    0.09    0.16     0.16    0.12       0.19      0.20       0.24      0.23       0.26       0.18      0.20       0.19      0.11     0.12    0.19                 0.14    0.22       0.18       4.36
+  22     0.17     0.27    0.22    0.24     0.14    0.03    0.06     0.08    0.04       0.08      0.13       0.15      0.09       0.13       0.07      0.08       0.07      0.10     0.05    0.13      0.11               0.03       0.10       2.59
+  23     0.22     0.23    0.26    0.32     0.21    0.07    0.16     0.08    0.12       0.26      0.30       0.21      0.26       0.21       0.10      0.20       0.18      0.08     0.13    0.22      0.21       0.11               0.25       4.41
+  24     0.26     0.27    0.31    0.24     0.30    0.18    0.21     0.21    0.25       0.27      0.26       0.27      0.30       0.30       0.24      0.30       0.24      0.14     0.20    0.22      0.27       0.16    0.18                  5.57
+  To     4.56     4.78    5.11    5.28     4.83    2.32    3.50     2.90    3.10       4.01      4.48       3.61      3.93       4.20       3.36      3.99       3.74      3.20     3.13    3.97      4.02       3.29    3.52       3.95
+  Net    0.37     1.52    0.96    1.96     1.32    0.67    0.25     0.21    −0.03      −0.57     −1.18      −0.68     −0.73      −0.47      −0.17     −0.72      −0.82     0.57     0.33    −0.65     −0.35      0.70    −0.89      −1.62
+
+Note: The element in the table is the pairwise transfer entropy. 1 = Bitcoin, 2 = Ethereum, 3 = Ripple, 4 = Stellar, 5 = Litecoin, 6 = Gold, 7 = Silver, 8 = Aluminium, 9 = Copper, 10 = Nickel, 11 = Natural Gas, 12 = Heating Oil, 13 = Unleaded Gas,
+14 = Crude Oil,15 = Live Cattle, 16 = Cocoa, 17 = Coffee, 18 = Corn, 19 = Cotton, 20 = Lean Hogs, 21 = Orange Juice, 22 = Soybeans, 23 = Wheat and 24 = Sugar.
+
+
+
+
+                                                                                                                                                                                                                                                          1045
+1046                                                                Q. Ji et al. / Energy Economics 81 (2019) 1042–1055
+
+
+where l is the order of the assumed Markov process for Y, and TY→X(k, l)                                 X
+is deﬁned as the information ﬂow from source Y on the next state of X                           Dout
+                                                                                                 i   ¼         T ji −T ij ; if and only if T ji −T ij ≫0                                    ð6Þ
+that cannot be explained by the past state of X. Following the previous lit-                               j
+
+
+erature, we assume l = k = 1 (Bekiros et al., 2017). Similarly, T X→Y ðk; lÞ ¼
+                                                                                                2.2.2. Information integration network
+                                  ðlÞ ðkÞ
+P             ðlÞ ðkÞ     pðj jj ; i Þ                                                              In addition to the information spillover network, we also construct
+    pðjtþ1 ; jt ; it Þ log tþ1 t ðlÞt . Obviously, the transfer entropy is
+                            pðjtþ1 jjt Þ                                                        an information integration network to measure the centrality of infor-
+asymmetric for the pairwise (X, Y) and (Y, X). Therefore, it can provide                        mation integration among assets. Following Yang and Zhou (2017), in
+useful information about the direction of interdependence between two                           the information integration network, we ignore the direction of spill-
+time series.                                                                                    over, focusing instead on the intensity of co-movement. Therefore, we
+                                                                                                ﬁrst transform the transfer entropy spillover matrix T into a symmetric
+2.2. Entropy-based networks and different measures                                              transfer entropy intensity matrixT,~ in which the diagonal elements are
+                                                                                                zeros and the off-diagonal elements are the sum of two pairwise trans-
+   In this study, two different networks are built: an information spill-                       fer entropies (Tfij ¼ Tfji ¼ T ij þ T ji ). Subsequently, to ﬁlter the necessary
+over network and an information integration network. The former focuses                         information and identify the redundant information disturbed by
+on the direction of information spillover among assets, while the latter                        some unimportant linkages, we employ an MST to depict the core link-
+highlights the centrality of market integration among assets.                                   ages among the assets. As indicated by Ji et al. (2018a), an MST is ‘a con-
+                                                                                                nected spanning tree that has the minimum total edge weight. It has
+2.2.1. Information spillover network                                                            advantages compared with other tree structures, such as the planar
+    In this section, the information spillover network is constructed. First,                   maximally ﬁltered graph, because it contains the most relevant connec-
+we construct a transfer entropy spillover matrix T = [Tij], in which                            tions of each element in the set, with a simpleness and robustness struc-
+Tijdenotes the transfer entropy from asset j to asset i, that is, Tij = Tj→i. Sim-              ture that has been widely applied in the ﬁnancial ﬁeld for market
+ilar to Diebold and Yilmaz's (2014) connectedness measures, pairwise net                        integration’ (see also Kristoufek et al., 2012). Detailed information
+transfer entropy N(Tij) is measured by Tij − Tji. Transfer entropy ‘From’                       about how to construct an MST can be found in most of the relevant lit-
+and ‘To’ are calculated by the row sum Ti←· = ∑N            j=1Tij, j ≠ i and column            erature and involves the use of Prim's algorithm (Prim, 1957). In gen-
+sum T·←j = ∑N    i=1Tij, i ≠ j, respectively, of the transfer entropy spillover ma-             eral, for N markets, the MST only contains N−1 links with the closest
+trix T. The total net transfer entropy of variable i is deﬁned as Ti = T·←i −                   distance.
+Ti←·, and the system total spillover index is deﬁned as                             T total         Following Ji and Fan (2016) and Ji et al. (2018a), three centrality
+                                                                                                measures are introduced to identify the most important node in the net-
+   1 N
+¼    ∑       T ; i≠j.                                                                           work, which are constructed as follows:
+   N i; j¼1 ij
+    Second, the information spillover network is constructed based on                                                                X
+                                                                                                                                     n
+the pairwise net transfer entropy. There exists a directional edge,Ej←i,                        degree centrality :         kðiÞ ¼         aij ;                                            ð7Þ
+in the information spillover network if and only if N(Tji) ≫ 0. At this                                                              j¼1
+
+point, we can easily identify the structure of information ﬂow among                                                                       X
+different assets.                                                                               closeness centrality :         CC ðiÞ ¼              Rij ;    i≠j;   and                    ð8Þ
+    In this network, degree centrality is used to analyse the inﬂuence of                                                                   ði; jÞ
+
+the node in the system. Therefore, the weighted in-degree and out-
+degree centralities of a node in the network are measured. Weighted                                                                                    2   X σ jlðiÞ
+                                                                                                betweenness centrality :             BðiÞ ¼                            ; i≠j≠l;             ð9Þ
+in-degree and out-degree centrality are respectively deﬁned as follows:                                                                            N ðN−1Þ ð j;lÞ σ jl
+       X
+Din
+ i ¼         T ij −T ji ;   if and only if T ij −T ji ≫0                              ð5Þ        where aij = 1 if and only if vertex i and vertex j have an edge in the MST,
+         j
+
+
+
+
+Table 3
+Information spillover among different types of assets.
+
+  Panel A: Pairwise spillover
+
+                                          Cryptocurrency                        Metals                         Energy                              Agricultural                        From
+
+  Cryptocurrency                          2.759                                 3.978                          3.229                               8.470                               15.677
+  Metals                                  5.555                                 1.716                          2.713                               5.325                               13.593
+  Energy                                  4.740                                 3.644                          2.260                               8.632                               17.016
+  Agricultural                            11.512                                6.505                          8.014                               13.738                              26.031
+  To                                      21.807                                14.127                         13.956                              22.427
+  Net                                     6.130                                 0.534                          −3.060                              −3.604
+
+  Panel B: Net pairwise spillover
+
+                                                   Cryptocurrency                               Metals                               Energy                                       Agricultural
+
+  Cryptocurrency                                   0                                            0                                    0                                            0
+  Metals                                           1.577                                        0                                    0                                            0
+  Energy                                           1.511                                        0.931                                0                                            0.618
+  Agricultural                                     3.042                                        1.180                                0                                            0
+
+Note: In this table, information spillover between groups of assets is calculated based on the pairwise transfer entropy from Table 2. For example, the value of the diagonal element
+(Cryptocurrency, Cryptocurrency) is calculated as the average of the sum of all the pairwise transfer entropy values between the ﬁve cryptocurrencies. Similarly, the value of the off-di-
+agonal element (Cryptocurrency, Metal) is calculated as the average of the sum of all the pairwise transfer entropy values between the ﬁve cryptocurrencies and four metal commodities
+(i.e., a total of 5 × 4 = 20 combinations).
+                                                                   Q. Ji et al. / Energy Economics 81 (2019) 1042–1055                                                             1047
+
+
+
+
+                                                            a.   Energy, cryptocurrency, and major commodity markets
+
+
+
+
+                                           b. Energy and Cryptocurrencies                                   c. Energy and Metals
+
+
+
+
+                                             d. Energy and Agricultural
+
+Fig. 1. Entropy-based network based on net pairwise spillover among energy, cryptocurrency and commodity markets. Note: Figs. 1(b), (c) and (d) are the subgraphs of Fig. 1(a), which
+only retains the edges between energy and other types of assets. For example, for Fig. 1(b), only the edge with one node belonging to Energy and another node belonging to Cryptocurrency
+is retained. Node size is calculated using the weighted out-degree of the pairwise net transfer entropy, while edge size is measured using the pairwise net transfer entropy. Nodes are
+coloured from blue to orange, according to the node size ranking, intuitively indicating that blue nodes act as large information transmitters and orange notes act as large information
+recipients, which is consistent with the node size.
+1048                                                             Q. Ji et al. / Energy Economics 81 (2019) 1042–1055
+
+
+Rijis the shortest path from i to j in the MST, σjl(i) is the number of                            5
+shortest paths from j to l that pass through i, and σjl is the number of
+shortest paths from j to l. Moreover, we use the normalised tree length
+           1   X                                                                                  4.5
+(LðtÞ ¼             eij ) to measure the degree of system integration, in
+         N−1 e ∈MST
+                ij
+
+which eij is the edge in the MST.                                                                  4
+
+
+
+3. Empirical results                                                                              3.5
+
+                                                                                                                                                        Total spillover index
+3.1. Sample analysis
+                                                                                                   3
+
+    We use daily price data covering leading cryptocurrencies (Bitcoin,
+Ethereum, Ripple, Stellar and Litecoin)6 and three commodity groups
+(energy, metals and agricultural commodities). Energy includes natural
+gas, heating oil, unleaded gas and crude oil; metals include gold, silver,                     Fig. 2. Total spillover index among energy, cryptocurrency and commodity markets.
+
+aluminium, copper and nickel; and agricultural commodities include
+live cattle, cocoa, coffee, corn, cotton, lean hogs, orange juice, soybeans,                     Looking at the overall results, we observe two general patterns. First,
+wheat and sugar. Price data on cryptocurrencies come from https://                           the cryptocurrencies are not outside of the system, and the information
+coinmarketcap.com/, whereas price data on commodities come from                              ﬂow from them is reﬂected in the rest of the system. This does not nec-
+Datastream. The sample period is from 15 August 2015 to 27 September                         essarily mean that the cryptocurrencies actually inﬂuence the commod-
+2018, resulting in 819 daily common observations across various com-                         ities in a strict sense but that the information affecting cryptocurrencies
+modities and cryptocurrencies. The starting point, 15 August 2015,                           also has a speciﬁc effect on agricultural commodities, albeit with a delay.
+was dictated by data availability for the cryptocurrencies. We conduct                       This delay is inherent to agricultural commodities, as they are depen-
+the empirical analyses with daily returns calculated as 100 times the                        dent on production and growing cycles that have various costs, many
+ﬁrst difference of the logarithmic closing prices. Summary statistics of                     of them ﬁxed, which can be adjusted only with a pronounced delay
+the daily returns are provided in Table 1. All return series depart from                     (Janda et al., 2012; Janda and Kristoufek, 2019). And second, the most
+normality. Notably, the average returns and standard deviations of the                       frequently and most strongly inﬂuenced commodities are the agricul-
+returns for the ﬁve cryptocurrencies are substantially higher than                           tural ones. This is connected to the previous point about the delayed
+those in the three commodity groups. The risk-adjusted returns are pos-                      cost adjustments, and it is well documented in the literature (Filip
+itive for cryptocurrency, energy and gold, although they are higher in                       et al., 2017). The evidence related to the very weak dependence of
+cryptocurrency. Within the cryptocurrency market, Ethereum has the                           gold on cryptocurrencies and commodities is not surprising, given its
+highest return, while Stellar is the most volatile. However, in terms of                     role as a safe-haven and the particularity of the factors that affect its
+the risk-adjusted returns, Bitcoin is the most attractive. All energy com-                   returns and volatility (Baur and McDermott, 2010, 2016).
+modities have a positive average return. Metals and agricultural com-                            Focusing on the line titled ‘To’, which indicates the total information
+modities, except gold, exhibit negative average returns. Nonetheless,                        spillover from each variable to the other variables, Stellar and Ripple are
+the average return of all commodities is close to zero. Moreover, the                        the largest contributors, with values of 5.28 and 5.11, respectively. Con-
+augmented Dickey–Fuller (ADF) and Phillips–Perron (PP) tests show                            versely, gold and aluminium are the smallest contributors, with total in-
+that the stationarity of all the return series cannot be rejected.                           formation spillover values of 2.32 and 2.90, respectively. Based on the
+                                                                                             last row, titled ‘From’, it appears that natural gas and sugar receive the
+3.2. Information spillover network analysis                                                  highest amount of information spillover from other variables, with
+                                                                                             values of 5.66 and 5.57, respectively. In contrast, gold and soybeans re-
+    In this section, we present the information spillovers among the                         ceive the lowest amount of information spillover from other variables,
+returns of the different variables, from both static and dynamic perspec-                    with values of 1.65 and 2.59, respectively. Gold thus retains its safe-
+tives. We consider various measures of transfer entropy networks with                        haven property even from this more aggregated perspective. As for
+the aim of discovering the structure, direction and strength of the                          the last line, titled ‘Net’, which measures the difference between total
+network.                                                                                     information spillover values (i.e., ‘To’ minus ‘From’), the net values are
+                                                                                             positive in the cases of Bitcoin, Ethereum, Ripple, Stellar, Litecoin, gold,
+3.2.1. Static results                                                                        silver, aluminium, corn, cotton and orange juice. The most positive
+    Table 2 presents measures of information spillovers among the ex-                        values are reported for Stellar and Ethereum, suggesting these variables
+amined variables in three forms: pairwise net, ‘To’ and ‘From’. It appears                   are the leading contributors to the global information ﬂow among the
+that the largest pairwise information spillovers are from orange juice to                    examined variables and thereby to market integration. This is in accor-
+natural gas (0.32) and cocoa (0.30); from Stellar to wheat (0.32) and                        dance with cryptocurrencies being the most volatile of the analysed
+coffee (0.31); from Ripple to sugar (0.31) and unleaded gas (0.30);                          samples as well as their quick reactions and, frequently, overreactions
+from Litecoin to sugar (0.30); from natural gas to wheat (0.30); from                        to news. Conversely, negative net information spillover is reported for
+unleaded gas to natural gas (0.30) and sugar (0.30); from crude oil to                       the rest of the variables. Speciﬁcally, the main net receivers of informa-
+sugar (0.30); from cocoa to sugar (0.30) and crude oil (0.29); and                           tion in the global information ﬂow are sugar and natural gas, suggesting
+from nickel to cocoa (0.29). Conversely, the smallest pairwise informa-                      the isolation (i.e., segmentation) of these two agricultural commodities.
+tion spillovers are from wheat to gold (0.01); from gold to silver (0.02)                        We also provide a summary of the results of the pairwise informa-
+and aluminium (0.03); from aluminium to gold (0.02); from unleaded                           tion spillover analysis while considering the ﬁve cryptocurrencies as a
+gas to gold (0.02); from cocoa to gold (0.02); from cotton to gold                           single Cryptocurrency group and three commodity groups (Metals, En-
+(0.02); from corn to aluminium (0.02); from copper to gold (0.03);                           ergy and Agricultural). The largest pairwise information spillovers are
+and from live cattle to cotton (0.03).                                                       from the Cryptocurrency to Agricultural groups (11.512), from Agricul-
+                                                                                             tural to Energy (8.632) and Cryptocurrency (8.470), and from Energy to
+  6
+    The ﬁve cryptocurrencies represent more than 78% of the overall cryptocurrency mar-      Agricultural (8.014). This underlines the results reported for the sepa-
+ket and attract more than 82% of the 24-hour trade volume.                                   rate commodities (i.e., the integration of cryptocurrencies into the
+                                                                     Q. Ji et al. / Energy Economics 81 (2019) 1042–1055                                                                  1049
+
+
+
+
+Fig. 3. Net spillover index for each type of assets. Note: The net spillover index for each type of asset is calculated as the sum of all the net spillover indexes of assets in the same group.
+
+
+market as well as the strong interaction between agricultural and en-                              main net transmitter is Cryptocurrency (6.130), whereas Agricultural
+ergy commodities). The smallest pairwise information spillovers are                                and Energy are net receivers, with values of −3.604 and −3.06, respec-
+from Energy to Metals (2.713), Energy to Cryptocurrency (3.229),                                   tively. Interestingly, and as shown in Panel B of Table 3, Cryptocurrency
+Metals to Energy (3.644) and Metals to Cryptocurrency (3.978). The                                 is a net transmitter to each of the three groups, while Metals is a net
+low spillovers from Energy to Cryptocurrency are particularly interest-                            transmitter to Energy and Agricultural. Cryptocurrencies thus play an
+ing because electricity prices, which are highly dependent on the prices                           important role in the entire system, as they react to the arriving infor-
+of production factors (e.g., coal and gas), play a crucial role in the pro-                        mation the fastest and are clearly the most sensitive to news in the
+duction (i.e., mining) costs of cryptocurrencies. As all the analysed                              group of analysed assets. This goes against the popular conception of
+cryptocurrencies are based on the proof-of-work concept—in which                                   cryptocurrencies being either completely or, at least, strongly detached
+the transactions are conﬁrmed and veriﬁed by solving computationally                               from all other ﬁnancial assets. Based on our results, this is not the case.
+intensive hashes that are physically veriﬁed by specialised chips—elec-                            The implications for practical portfolio diversiﬁcation are quite straight-
+tricity price is a competitive factor in cryptocurrency production. How-                           forward, as cryptocurrencies being inﬂuenced by similar information to
+ever, it is reasonable to assume that similar conclusions are true for                             that which inﬂuences the rest of the system (or at least the part of the
+other cryptocurrencies as well because mining was highly proﬁtable                                 global assets network we study here) lowers their diversiﬁcation poten-
+up until the ﬁrst half of 2016 and during the boom of 2017 (speciﬁcally,                           tial and beneﬁts.
+between Q2 and Q4 of 2014), when the margin between electricity costs                                  For better visualisation of the information spillover network ema-
+and the price of mined bitcoins was above 1000%. In the middle of 2018,                            nating from the pairwise net transfer entropy, an infographic illustra-
+the margin dropped to around 100%. It is easy to see that in the earlier                           tion is provided in Fig. 1.7 It is comprised of nodes and edges. The size
+period, electricity price was not relevant, as cryptocurrency mining                               of the node reﬂects the strength of the information spillover, whereas
+was proﬁtable for practically anyone, even with average household                                  the colour indicates the structure hierarchy of the information ﬂow net-
+electricity prices. As the mining difﬁculty has increased and                                      work. Net transmitters are shown in blue–violet, whereas net receivers
+cryptocurrency prices have undergone a correction since the surge of                               are shown in orange. The edge size reﬂects the magnitude of the
+2017, electricity prices have become more and more relevant. In fact,                              pairwise net transfer entropy and has an arrow that indicates the direc-
+the year 2018—and mainly the second half—was characterised by                                      tion of the information ﬂow. Fig. 1a considers energy, cryptocurrency
+some big mining companies (e.g., Bitmain) and mining initial coin offer-                           and major commodity markets. It shows that nodes introduce distinct
+ings (ICOs) experiencing trouble or even halting or closing their busi-                            information spillover contributions to the network, where Stellar has
+nesses. The weak connection between cryptocurrencies and energy                                    the largest spillover contribution to the system and sugar is the com-
+commodities, seen from the global perspective, is not, therefore,                                  modity most affected by system information. Interestingly, the role of
+completely surprising, and it only highlights the need for dynamic anal-                           leading cryptocurrencies other than Bitcoin is important. This was also
+ysis of the connections between the commodities groups, which we                                   the case for the information ﬂow between the Energy and
+provide further below.                                                                             Cryptocurrency groups (Fig. 1b). As for the information ﬂow between
+    Moving to the highest and lowest receivers of information from                                 Energy and Metals (Fig. 1c), it shows that gold and, to a lesser extent, sil-
+other groups, the Agricultural group is in ﬁrst place (26.031), far                                ver play the role of transmitters. The network of information ﬂow
+ahead of Energy (17.016), which is in second place. Conversely, Metals
+is the lowest receiver of information spillover from other groups                                   7
+                                                                                                       Notably, for the existence of an arrow edge from one variable to another, there must
+(13.593). Regarding net receivers/transmitters of information, the                                 be a pairwise net transfer entropy from that variable to the other that is larger than zero.
+                                                                                                                                                                                                                       1050
+Table 4
+Summary statistics for the in-degree, out-degree and net spillover index of each asset.
+
+                                          In-degree                                                      Out-degree                                              Net
+
+                                          Mean        Std.dev     Skewness       Kurtosis   J-B          Mean     Std.dev     Skewness   Kurtosis   J-B          Mean     Std.dev   Skewness   Kurtosis   J-B
+
+                       Bitcoin            0.320       0.186       0.402          2.198      30.574***    1.686        0.552     0.655      2.208     55.584***    1.366    0.712      0.400      1.953    41.135***
+                       Ethereum           0.045       0.037       0.806          2.939      61.671***    2.099        0.261     0.138      1.890     31.029***    2.054    0.288      0.075      1.891    29.672***
+
+
+
+
+                                                                                                                                                                                                                       Q. Ji et al. / Energy Economics 81 (2019) 1042–1055
+  Cryptocurrency       Ripple             0.237       0.170       0.323          2.019      32.691***    1.573        0.466     0.631      2.052     59.067***    1.335    0.615      0.476      1.838    53.506***
+                       Stellar            0.091       0.128       1.505          4.436      263.811***   2.015        0.417    −0.527      2.166     42.797***    1.924    0.529     −0.696      2.203    61.041***
+                       Litecoin           0.173       0.193       0.957          2.659      89.550***    1.754        0.706     0.023      1.470     55.524***    1.581    0.880     −0.147      1.575    50.190***
+                       Gold               0.816       0.249       0.117          2.314      12.460***    1.158        0.429    −0.346      1.511     63.898***    0.341    0.526     −0.651      2.468    46.835***
+                       Silver             1.030       0.301       −0.370         2.285      25.102***    0.579        0.170    −0.144      2.124     20.129***   −0.452    0.406      0.227      1.800    39.054***
+  Metals               Aluminium          1.300       0.360       −0.076         2.146      17.851***    0.602        0.290     0.292      1.630     52.634***   −0.698    0.539      0.568      2.003    54.135***
+                       Copper             0.923       0.230       −0.073         1.897      29.340***    0.637        0.237    −0.070      1.890     29.662***   −0.286    0.311     −0.023      3.207    1.063
+                       Nickel             1.057       0.350       0.237          1.997      29.157***    0.572        0.224     0.781      2.814     58.739***   −0.484    0.530      0.341      2.245    24.571***
+                       Natural Gas        0.675       0.297       0.386          1.805      48.004***    1.024        0.255    −0.136      2.395     10.428***    0.349    0.515     −0.325      1.871    40.258***
+                       Heating Oil        1.025       0.430       0.032          1.955      25.998***    0.653        0.248     0.552      2.409     37.132***   −0.372    0.653      0.250      1.918    33.716***
+  Energy
+                       Unleaded Gas       1.101       0.396       −0.157         1.754      39.150***    0.506        0.221     0.802      2.682     63.433***   −0.595    0.591      0.457      2.000    43.469***
+                       Crude Oil          0.816       0.481       −0.558         1.927      56.810***    0.735        0.607     1.103      2.764    116.667***   −0.081    1.074      0.887      2.364    84.148***
+                       Live Cattle        1.342       0.198       −0.414         2.450      23.422***    0.380        0.104     0.796      3.574     67.944***   −0.962    0.265      0.650      2.695    42.233***
+                       Cocoa              1.057       0.268       0.765          2.958      55.567***    0.418        0.147     0.048      1.973     25.235***   −0.638    0.378     −0.676      2.649    46.250***
+                       Coffee             1.198       0.301       0.035          2.397      8.751**      0.318        0.223     1.351      3.767    187.113***   −0.880    0.481      0.744      3.059    52.626***
+                       Corn               0.944       0.235       −0.138         2.214      16.434***    0.616        0.236     0.403      2.052     36.677***   −0.328    0.280     −0.593      3.808    48.794***
+                       Cotton             1.141       0.145       0.310          2.774      10.327***    0.686        0.226     0.161      1.999     26.231***   −0.455    0.271     −0.252      3.092    6.214**
+  Agricultural
+                       Lean Hogs          0.940       0.319       −0.003         2.001      23.647***    0.618        0.254     0.458      2.428     27.677***   −0.322    0.554      0.232      2.017    28.003***
+                       Orange Juice       0.969       0.220       −0.303         3.351      11.609***    0.618        0.232    −0.009      2.314     11.181***   −0.351    0.348      1.108      4.062    143.180***
+                       Soybeans           0.903       0.153       0.822          4.089      92.197***    0.800        0.362     0.460      2.548     24.893***   −0.103    0.481      0.140      2.925    2.004
+                       Wheat              1.390       0.283       0.763          2.778      56.392***    0.362        0.115     0.657      3.138     41.378***   −1.028    0.369     −0.635      2.637    41.396***
+                       Sugar              1.293       0.190       0.090          2.846      1.328        0.378        0.137     0.296      2.647     11.263***   −0.915    0.265      0.029      2.813    0.906
+
+*** Denotes signiﬁcance at 1% level.
+                                                                 Q. Ji et al. / Energy Economics 81 (2019) 1042–1055                                                              1051
+
+
+
+
+                                                            Fig. 4. MST based on pairwise transfer entropy information.
+
+
+
+
+between Energy and Agricultural (Fig. 1d) shows more interactions be-                        2016, when the West Texas Intermediate (WTI) crude oil price went
+tween the commodities, with energy commodities showing more con-                             from $110 per barrel to around $35 per barrel. The driving force behind
+nections among themselves and with some agricultural commodities.                            energy commodities seems to be closely connected to this price, as the
+Apparently, agricultural commodities such as orange juice, lean hogs,                        net spillover index starts growing with the increasing price in 2017
+wheat and sugar exhibit weakness in terms of power and magnitude                             and 2018. Interestingly, the Cryptocurrency group is consistently a net
+of connection with others and with themselves.                                               transmitter of information during all sample periods, with evidence of
+                                                                                             an increase in its contribution to the global transmission of information
+                                                                                             during the period from early 2017 to mid-2018. The role of
+3.2.2. Dynamic results                                                                       cryptocurrencies has thus had an evident increasing tendency. How-
+    Although the results presented in Subsection 3.2.1 help in                               ever, this might be a similar situation to that of energy commodities,
+uncovering the network of information transmission among the exam-                           as the cryptocurrencies appreciate in price for most of the examined pe-
+ined variables, they provide no indication of whether the interdepen-                        riod and the net spillover index stabilises at the end of the period, when
+dence among the examined variables is static or time variant.                                the rolling windows get to the correction year of 2018. As for the Metals
+Abundant evidence suggests the possibility that structural changes af-                       group, it spends the whole sample period in negative territory (i.e., as a
+fect the stability of the information ﬂow among ﬁnancial markets                             net receiver of information), except for a short period ranging from
+(e.g., Ji et al., 2018b), which renders it dynamic rather than static. To re-                March to April 2017. As for the Agricultural group, its net spillover
+veal the time variability in the total spillover index, we apply a rolling                   index swings but remains in the negative area, making it a consistent
+window analysis8 and present the results in Fig. 2. The results from                         net receiver of information during all sample periods.
+this measure of information spillover for the whole network demon-                               In Table 4, we also present the summary statistics for the in-degree,
+strate clear variability during the sample period and, importantly, gen-                     out-degree and net spillover index of each variable under study. The
+erally exhibit a declining trend. After peaking in early 2017, there is a
+steady decline towards March and into April 2018, when it bottoms
+out and then begins to slightly increase.
+    We also present the time-varying net spillover index for each group                      Table 5
+                                                                                             Integration degree among different types of assets.
+in Fig. 3, where time variation is omnipresent in all four groups but the
+signs of net spillover are dissimilar. For the Energy group, the net spill-                                               Cryptocurrency        Metals      Energy       Agricultural
+over index (i.e., net transfer entropy) declines from the beginning of                         Cryptocurrency             6.299
+the sample period and switches to negative territory from Q3 of 2017                           Metals                     6.925                 7.846
+onwards, with a downward slope. The switch of the net spillover from                           Energy                     5.601                 5.329       3.195
+positive to negative suggests a switch in the contribution of energy to                        Agricultural               5.876                 6.016       3.490        4.106
+                                                                                               External integration       18.402                18.27       14.42        15.382
+the global ﬂow of information from a net transmitter status to a net re-
+ceiver one. This is likely connected to the decreasing price of crude oil                    Note: The value of each element in the table is calculated as the average of the sum of all
+                                                                                             the pairwise shortest paths between the variables in the pairwise types of assets. For ex-
+and, consequently, other energy commodities between 2015 and
+                                                                                             ample, the value of the element ‘Cryptocurrency, Metals’ is calculated as the average of
+                                                                                             the sum of all the pairwise shortest paths between one node in Cryptocurrency and an-
+ 8
+     We use a window size of 250 days, corresponding to a one-year period.                   other node in Metals.
+1052                                                                  Q. Ji et al. / Energy Economics 81 (2019) 1042–1055
+
+
+
+
+                                                               Fig. 5. System integration index based on the time-varying MST.
+
+
+
+highest weighted average in-degree values in each of the four groups                                highest weighted average out-degree values, they are reported for
+are as follows: Bitcoin (0.320) in Cryptocurrency; aluminium (1.300)                                Ethereum (2.099) in the Cryptocurrency group; gold (1.158) in Metals;
+in Metals; unleaded gas (1.101) in Energy; and wheat (1.390) in Agri-                               natural gas (1.024) in Energy; and soybeans (0.800) in Agricultural
+cultural commodities. The central cryptocurrency of Bitcoin being a cen-                            commodities. Regarding the net spillover index, Ethereum and Stellar
+tral node is not surprising, as Bitcoin is usually synonymous with the                              have the largest values in the Cryptocurrency group, which is a net
+whole cryptomarket. Until 2017, Bitcoin capitalisation comprised be-                                transmitter of information (see also Fig. 3). Gold is a net transmitter,
+tween 80% and 90% of all cryptomarket capitalisation. It was only in                                whereas the rest of the commodities in the Metals group are net re-
+2017, the year that experienced the unleashing of altcoins and tokens,                              ceivers of information, especially aluminium (−0.698). In the Energy
+that the dominant role of Bitcoin was diminished. In energy commodi-                                group, natural gas is the only net transmitter, whereas the largest net re-
+ties, even though unleaded gas has the highest statistics, it is on a similar                       ceiver is unleaded gas. In the Agricultural group, which contains only
+level with other commodities—speciﬁcally, heating oil and crude oil—                                net receivers, live cattle and sugar are the two largest net receivers.
+and it seems there is no strong central point in this group of commodi-                             Ethereum being a receiver of information reﬂects its role as a smart con-
+ties. A similar outcome is found for agricultural commodities. As for the                           tract cryptocurrency. In the boom of 2017, many projects launched their
+
+
+
+
+Fig. 6. Integration index for each type of asset based on the time-varying MST. Note: The value of the integration index for each type of asset is calculated as the average of the sum of all the
+pairwise shortest paths between one node in one type and another node in the other types.
+                                                               Q. Ji et al. / Energy Economics 81 (2019) 1042–1055                                                                1053
+
+
+ICOs, and most of them were based on the Ethereum platform. As long                        Table 6
+as the cryptomarket was booming, ICO issues were booming as well,                          Summary statistics of centrality measures.
+
+which led to skyrocketing demand for Ethereum as their most popular                                                           Degree            Closeness             Betweenness
+host platform. Gold holds its position as a safe-haven asset.                                                                 centrality        centrality            centrality
+
+                                                                                                                              Mean Std.         Mean         Std.     Mean Std.
+                                                                                                                                   dev                       dev           dev
+3.3. Centrality network analysis
+
+                                                                                                            Bitcoin           1.132     0.438   167.852      25.706   0.016   0.056
+   While the above analyses consider the information spillover net-
+                                                                                                            Ethereum          1.002     0.042   166.097      27.351   0.000   0.010
+work by giving special attention to the direction of spillover, the analy-                   Cryptocurrency Ripple            1.063     0.244   164.019      28.300   0.013   0.058
+ses in this section consider the information integration network by                                         Stellar           1.000     0.000   166.087      29.102   0.000   0.000
+emphasising the intensity of the spillover.9 Speciﬁcally, we construct                                      Litecoin          1.000     0.000   168.176      26.203   0.000   0.000
+both static and dynamic MSTs to highlight the importance of each indi-                                      Gold              1.842     0.738   149.616      27.863   0.073   0.064
+                                                                                                            Silver            2.467     0.949   132.334      27.177   0.184   0.172
+vidual variable (or group of variables) and the stability and evolution of
+                                                                                             Metals         Aluminium         2.037     1.085   136.277      22.945   0.118   0.135
+the integration structure for the information ﬂow.                                                          Copper            1.664     0.912   141.175      29.665   0.116   0.169
+                                                                                                            Nickel            2.079     0.978   128.696      22.742   0.189   0.192
+                                                                                                            Natural Gas       1.979     1.157   135.689      31.311   0.161   0.204
+3.3.1. Static results                                                                                       Heating Oil       2.743     1.175   118.263      26.519   0.334   0.248
+    Focusing on the core connections among all the variables under                           Energy         Unleaded          2.678     1.206   122.964      29.028   0.280   0.238
+study, Fig. 4 illustrates the MST based on pairwise information                                             Gas
+spillovers. It shows that some commodities and cryptocurrencies are                                         Crude Oil         2.295     1.307   125.818      27.361   0.226   0.228
+                                                                                                            Live Cattle       2.631     1.183   119.890      30.443   0.293   0.248
+clustered together. However, the most important cluster in the
+                                                                                                            Cocoa             3.167     1.192   109.953      22.689   0.376   0.221
+network is centred on natural gas, suggesting that this energy commod-                                      Coffee            1.989     0.894   139.364      23.191   0.130   0.143
+ity is a predominant commodity and has a powerful inﬂuence in the                                           Corn              1.622     0.794   138.606      25.976   0.099   0.156
+MST.                                                                                                        Cotton            1.522     0.687   148.510      26.738   0.048   0.067
+                                                                                             Agricultural
+                                                                                                            Lean Hogs         1.508     0.732   137.540      28.722   0.118   0.183
+    Table 5 presents results related to the degree of integration among
+                                                                                                            Orange Juice      1.754     0.820   134.333      28.322   0.168   0.200
+the four groups (i.e., Cryptocurrency, Energy, Metals and Agricultural),                                    Soybeans          1.745     0.760   135.923      22.374   0.092   0.126
+which could facilitate a better understanding than can connections be-                                      Wheat             2.640     1.613   123.081      30.708   0.287   0.268
+tween separate assets. First, we see that energy commodities are the                                        Sugar             2.467     1.233   127.474      27.279   0.226   0.209
+most central ones in the network, closely followed by agricultural com-
+modities. This is in accordance with the previous observation of energy
+and agricultural commodities being tightly interconnected. Second, the                     centrality, closeness centrality and betweenness centrality (Ji and Fan,
+energy and agricultural commodities are also quite closely connected                       2016; Ji et al., 2018a).
+within their respective groups, meaning that energy commodities                                Table 6 presents the summary statistics of those three centrality
+tend to move together, as do agricultural commodities. A much weaker                       measures. The results from the measure of degree centrality show that
+connection is observed among metal commodities and among                                   cocoa is the most important node in the MST, followed by heating oil.
+cryptocurrencies. And third, the most detached group in terms of the                       This suggests that information spillover from these two commodities
+network structure is the Metals group. Cryptocurrency has the largest                      plays a central role in inﬂuencing the other variables. The highest
+external integration value of 18.402, showing a weaker connection                          value for closeness centrality is that of Litecoin, suggesting a low degree
+with commodities within the system.                                                        of co-movement between this cryptocurrency and the other variables
+                                                                                           under study and, thus, a peripheral position in the MST. In contrast,
+3.3.2. Dynamic results                                                                     cocoa has the lowest measure of closeness centrality, which indicates
+    Unlike the static results above, these results reveal evidence of time                 tight connections with the other variables and a central position in the
+variability. Similar to Subsection 3.2.2, we use a rolling window with a                   MST. Regarding the betweenness centrality measure, cocoa and heating
+duration of 250 days. Fig. 5 shows the system integration index, which                     oil play important roles in connectedness in the information ﬂow. The
+is based on the time-varying MST. It appears that the integration degree                   results for the measures of closeness and betweenness centrality,
+of the cryptocurrency-commodity system is relatively stable during the                     which highlight the importance of each variable, are generally consis-
+period of 2016 to 2017 and then exhibits a decreasing trend from the                       tent with the results for degree centrality.
+beginning of 2018,10 which might be produced by changes in individual
+market conditions or common external shocks (Ji et al., 2018a).
+    We also focus on the evolution of the importance of each group in                      4. Concluding remarks
+the information integration network. As shown in Fig. 6, the importance
+of the Energy commodity group continues to increase since the energy                           Despite some early studies on the relationship between Bitcoin and
+integration index reaches a peak experienced in October 2016. This is                      commodity markets, the issue of the information spillovers and system
+not the case for the Cryptocurrency and Metals groups, which experi-                       integration of various energy and non-energy commodities and leading
+ence large ﬂuctuations. As for the Agricultural group, it exhibits                         digital currencies remains a puzzle to investors, practitioners and
+narrower variability.                                                                      policymakers. Motivated by a growing literature on the possible associ-
+    We conducted further analysis to detect the identity of the most im-                   ation between certain commodities (e.g., gold and crude oil) and lead-
+portant or central commodity/cryptocurrency in the network structure.                      ing cryptocurrencies (e.g., Bitcoin) emanating from some similarities
+Although the existing literature presents mixed views about what cen-                      in the features of commodities and cryptocurrencies, this study applies
+trality is and how it is measured, we apply three measures of centrality                   various network-based methods and centrality measures to examine in-
+that have been extensively used in academic research: degree                               formation spillovers among the returns of energy, cryptocurrency and
+                                                                                           major commodities. This is accomplished by considering both the direc-
+                                                                                           tion and intensity of spillovers from static and dynamic perspectives.
+ 9
+    This is done while ignoring the direction of spillover (Yang and Zhou, 2017).
+                                                                                           The results of the directional spillover analysis suggest that the most im-
+10
+    Note that the system integration index is an opposite indicator calculated by the      portant movers in the system are agricultural and energy commodities,
+shortest paths.                                                                            whereas metals react the least to information ﬂow in the system.
+1054                                                    Q. Ji et al. / Energy Economics 81 (2019) 1042–1055
+
+
+Cryptocurrencies inhabit the mid-range in terms of importance but are               Appendix A. Supplementary data
+well established within the system.
+    Interestingly, the connection between cryptocurrencies and energy                  Supplementary data to this article can be found online at https://doi.
+commodities is rather weak, which runs contrary to the common belief                org/10.1016/j.eneco.2019.06.005.
+that energy plays an essential role in cryptocurrency pricing. A rolling-
+window approach reveals evidence of dynamic characteristics in the
+transfer entropy in most cases. We use a time-varying entropy-based                 References
+approach to identify the direction of return spillovers, and the results
+                                                                                    Acharya, V., Pedersen, L.A., 2005. Asset pricing with liquidity risk. J. Financ. Econ. 77,
+show that the nature of information spillovers changes over time,                         375–410.
+with cryptocurrencies becoming the largest net transmitter of spill-                Altiparmak, F., Dengiz, B., 2009. A cross entropy approach to design of reliable networks.
+overs; in contrast, the spillover contribution of energy commodities to                   Eur. J. Oper. Res. 199 (2), 542–552.
+                                                                                    Baur, D.G., McDermott, T.K.J., 2010. Is gold a safe haven? International evidence. J. Bank.
+the system is dependent on their price dynamics. Regarding the inten-                     Financ. 34, 1886–1898.
+sity of spillovers, results from the MST highlight the importance of en-            Baur, D.G., McDermott, T.K.J., 2016. Why is gold a safe haven? J. Behav. Exp. Financ. 10,
+ergy and agricultural commodities, which form the backbone of the                         63–71.
+                                                                                    Bekiros, S., Nguyen, D., Junior, L.S., Uddin, G.S., 2017. Information diffusion, cluster forma-
+entire system. The least connected of the groups is the Metals group.                     tion and entropy-based network dynamics in equity and commodity markets. Eur.
+Cryptocurrencies are well integrated within the network, but as a                         J. Oper. Res. 256, 945–961.
+group, they show strong signs of heterogeneity. The core structure of               Billio, M., Getmansky, M., W. Lo, A., Pelizzon, L., 2012. Econometric measures of connect-
+                                                                                          edness and systemic risk in the ﬁnance and insurance sectors. J. Financ. Econ., 104,
+this network hierarchy does not change much over time even though
+                                                                                          535–559.
+the detailed connections are rather volatile and unstable.                          Blau, B.M., 2017. Price dynamics and speculative trading in bitcoin. Res. Int. Bus. Financ.
+    Our empirical analyses have major implications for decision-makers                    41, 493–499.
+as investors and policymakers are very concerned with information                   Bouri, E., Jalkh, N., Molnár, P., Roubaud, D., 2017. Bitcoin for energy commodities before
+                                                                                          and after the December 2013 crash: diversiﬁer, hedge or safe haven. Appl. Econ. 49
+spillovers across commodities and other markets, including the                            (50), 5063–5073.
+cryptocurrency market. A major implication is that commodity (or                    Bouri, E., Das, M., Gupta, R., Roubaud, D., 2018a. Spillovers between bitcoin and other as-
+cryptocurrency) investors should not neglect information spillovers                       sets during bear and bull markets. Appl. Econ. 50 (55), 5935–5949.
+                                                                                    Bouri, E., Gupta, R., Lahiani, A., Shahbaz, M., 2018b. Testing for asymmetric nonlinear
+from the cryptocurrency (or commodity) market when building invest-                       short-and long-run relationships between bitcoin, aggregate commodity and gold
+ment strategies that involve designing portfolios and risk-management                     prices. Resources Policy 57, 224–235.
+measures. Given the evidence of time variability in information spill-              Brauneis, A., Mestel, R., 2018. Price discovery of cryptocurrencies: bitcoin and beyond.
+                                                                                          Econ. Lett. 165, 58–61.
+overs, investment decisions and policy measures must pay special at-                Castagneto-Gissey, G., Chavez, M., De Vico Fallani, F., 2014. Dynamic Granger-causal net-
+tention to ensuring a dynamic approach in portfolio rebalancing and                       works of electricity spot prices: a novel approach to market integration. Energy Econ.
+risk inferences. Even though cryptocurrencies have very speciﬁc statis-                   44, 422–432.
+                                                                                    Diebold, F.X., Yilmaz, K., 2014. On the network topology of variance decompositions:
+tical and correlative properties within the system, their diversiﬁcation
+                                                                                          measuring the connectedness of ﬁnancial ﬁrms. J. Econ. 182, 119–134.
+beneﬁts do not seem to be miraculous as they seem to be quite well con-             Filip, O., Janda, K., Kristoufek, L., Zilberman, D., 2016. Dynamics and evolution of the role of
+nected to the commodities network even though they are certainly not                      biofuels in global commodity and ﬁnancial markets. Nat. Energy 1, 16169.
+                                                                                    Filip, O., Janda, K., Kristoufek, L., Zilberman, D., 2017. Food versus fuel: an updated and ex-
+central to the overall system. However, this will likely only be the case
+                                                                                          panded evidence. Energy Economics https://doi.org/10.1016/j.eneco.2017.10.033.
+until the next global market cooling, when the true nature of                       Hayes, A., 2017. Cryptocurrency value formation: an empirical analysis leading to a cost of
+cryptocurrencies' diversiﬁcation potential may be seen; this is because                   production model for valuing bitcoin. Telematics Inform. 34 (7), 1308–1321.
+the analysed period still mostly falls within the aftermath of the global           He, J., Shang, P., 2017. Comparison of transfer entropy methods for ﬁnancial time series.
+                                                                                          Physica A: Statistical Mechanics and its Applications 482, 772–785.
+ﬁnancial crisis and the subsequent quantitative easing and booming of               Henriques, I., Sadorsky, P., 2018. Can bitcoin replace gold in an investment portfolio? Jour-
+the prices of practically all ﬁnancial assets, which occurred after the                   nal of Risk Financial Management 11 (3), 48.
+wave of cheap money provided by the most important central banks.                   Janda, K., Kristoufek, L., 2019. The Relationship between Fuel and Food Prices: Methods
+                                                                                          and Outcomes. Annual Review of Resource Economics (in print).
+    There are several interesting future avenues one might take when                Janda, K., Kristoufek, L., Zilberman, D., 2012. Biofuels: policies and impacts. Agricultural
+studying the static and dynamic connections within the system of                          Economics – Czech 58 (8), 372–386.
+cryptocurrencies and commodities. First, other entropy measures such                Ji, Q., Fan, Y., 2016. Evolution of the world crude oil market integration: a graph theory
+                                                                                          analysis. Energy Econ. 53, 90–100.
+as effective transfer entropy, Rényi transfer entropy and effective                 Ji, Q., Bouri, E., Gupta, R., Roubaud, D., 2018a. Network causality structures among bitcoin
+Rényi transfer entropy (He and Shang, 2017) can be utilised to check                      and other ﬁnancial assets: a directed acyclic graph approach. The Quarterly Review of
+the robustness of the results. Second, the results can be materialised in                 Economics and Finance 70, 203–213.
+                                                                                    Ji, Q., Bouri, E., Lau, M.C.K., Roubaud, D., 2018b. Dynamic connectedness and integration in
+practical portfolio construction. Third, the cryptocurrency part of the                   cryptocurrency markets. Int. Rev. Financ. Anal. 63, 257–272.
+system calls for a more detailed network analysis not only connected                Ji, Q., Bouri, E., Roubaud, D., 2018c. Dynamic network of implied volatility transmission
+to its price dynamics and spillovers but also to the dynamics and con-                    among US equities, strategic commodities, and BRICS equities. Int. Rev. Financ.
+                                                                                          Anal. 57, 1–12.
+nections between prices, volatility, liquidity as well as mining costs.
+                                                                                    Ji, Q., Bouri, E., Roubaud, D., Shahzad, S.J.H., 2018d. Risk spillover between energy and ag-
+Even though there are some expected results to be found as various                        ricultural commodity markets: a dependence-switching CoVaR-copula model. En-
+groups of cryptocurrencies are bound to be tightly connected together                     ergy Econ. 75, 14–27.
+with respect to their protocols and mining algorithms, a detailed                   Ji, Q., Liu, B., Fan, Y., 2019. Risk dependence of CoVaR and structural change between oil
+                                                                                          prices and exchange rates: a time-varying copula model. Energy Econ. 77, 80–92.
+study of such interconnections is still missing. Overall, the                       Klein, T., Thu, H.P., Walther, T., 2018. Bitcoin is not the new gold–a comparison of volatil-
+cryptocurrency market and its rich network structure provide a wealth                     ity, correlation, and portfolio performance. Int. Rev. Financ. Anal. 59, 105–116.
+of possibilities for future research, and most of the related questions are         Kodres, L., Pritsker, M., 2002. A rational expectations model of ﬁnancial contagion.
+                                                                                          J. Financ. 57, 769–800.
+far from being answered.                                                            Koutmos, D., 2018. Return and volatility spillovers among cryptocurrencies. Econ. Lett.
+                                                                                          173, 122–127.
+Acknowledgement                                                                     Kristoufek, L., Janda, K., Zilberman, D., 2012. Correlations between biofuels and related
+                                                                                          commodities before and during the food crisis: a taxonomy perspective. Energy
+                                                                                          Econ. 34 (5), 1380–1391.
+   The ﬁrst author acknowledges supports from the National Natural                  Lo, S., Wang, C. J., 2014. Bitcoin as Money? Current Policy Perspectives, No. 14–4, Federal
+Science Foundation of China (Grant No. 71774152, No. 91546109) and                        Reserve Bank of Boston, Boston, MA. 2014.
+                                                                                    Luo, J., Ji, Q., 2018. High-frequency volatility connectedness between the US crude oil mar-
+the Youth Innovation Promotion Association of Chinese Academy of Sci-                     ket and China's agricultural commodity markets. Energy Econ. 76, 424–438.
+ences (Grant No. Y7X0231505). The last author acknowledges supports                 Ma, F., Zhang, Y., Wahab, M.I.M., Lai, X., 2019a. The role of jumps in the agricultural futures
+from the Charles University PRIMUS program (project PRIMUS/19/                            market on forecasting stock market volatility: new evidence. J. Forecast. https://doi.
+                                                                                          org/10.1002/for.2569.
+HUM/17).
+                                                                          Q. Ji et al. / Energy Economics 81 (2019) 1042–1055                                                                  1055
+
+Ma, Y., Ji, Q., Pan, J., 2019b. Oil ﬁnancialisation and volatility forecast: evidence from mul-       Shannon, C.E., 1948. A mathematical theory of communication. Bell System Technical
+    tidimensional predictors. J. Forecast. https://doi.org/10.1002/for.2577                              Journal, 27, 379–423, 623–656.
+Ma, Y., Zhang, D., Ji, Q., Pan, J., 2019c. Spillovers between oil and stock returns in the US         Wang, Y., Wei, Y., Wu, C., Yin, L., 2018. Oil and the short-term predictability of stock return
+    energy sector: does idiosyncratic information matter? Energy Econ. 81, 536–544.                      volatility. J. Empir. Financ. 47, 90–104.
+Polasik, M., Piotrowska, A.I., Wisniewski, T.P., Kotkowski, R., Lightfoot, G., 2015. Price ﬂuc-       Yang, Z., Zhou, Y., 2017. Quantitative easing and volatility spillovers across countries and
+    tuations and the use of bitcoin: an empirical inquiry. Int. J. Electron. Commer. 20 (1),             asset classes. Manag. Sci. 63 (2), 333–354.
+    9–49.                                                                                             Yermack, D., 2013. Is bitcoin a real currency? An economic appraisal. No. w19747. Na-
+Popper, N., 2015. Digital Gold: The Untold Story of Bitcoin. Penguin, London.                            tional Bureau of Economic Research 2013.
+Prim, R.C., 1957. Shortest connection networks and some generalizations. Bell Syst. Tech.             Zhang, D., 2017. Oil shocks and stock markets revisited: measuring connectedness from a
+    J. 36 (6), 1389–1401.                                                                                global perspective. Energy Econ. 62, 323–333.
+Schreiber, T., 2000. Measuring information transfer. Phys. Rev. Lett. 85, 461–464.                    Zhang, D., Broadstock, D.C., 2018. Global ﬁnancial crisis and rising connectedness in the
+Selgin, G., 2015. Synthetic commodity money. J. Financ. Stab. 17, 92–99.                                 international commodity markets. Int. Rev. Financ. Anal. https://doi.org/10.1016/j.
+Selmi, R., Mensi, W., Hammoudeh, S., Bouoiyour, J., 2018. Is bitcoin a hedge, a safe haven               irfa.2018.08.003
+    or a diversiﬁer for oil price movements? A comparison with gold. Energy Econ. 74,                 Zhang, D., Ji, Q., Kutan, A., 2019. Dynamic transmission mechanisms in global crude oil
+    787–801.                                                                                             prices: estimation and implications. Energy 175, 1181–1193.
+Shahzad, S.J.H., Bouri, E., Roubaud, D., Kristoufek, L., Lucey, B., 2019. Is bitcoin a better safe-
+    haven investment than gold and commodities? Int. Rev. Financ. Anal. 63, 322–330.
+

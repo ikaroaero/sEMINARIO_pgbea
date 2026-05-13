@@ -1,0 +1,85 @@
+<section class="slide wpe-intro-slide"
+  data-note="Introduza a WPE mostrando que o mesmo motivo ordinal pode esconder amplitudes muito diferentes."
+  data-stage-count="1">
+  <div class="wpe-intro-slide__stage wpe-intro-slide__stage--motivation">
+    <div class="wpe-intro-slide__copy">
+      <div class="kicker"></div>
+      <h2>Um pequeno desafio</h2>
+      <p>
+        A Entropia de Permutação clássica considera apenas a ordem relativa dos valores.
+        O problema é que blocos com intensidades muito diferentes podem produzir a mesma permutação.
+      </p>
+
+      <div class="card wpe-intro-slide__callout">
+        <p class="bigline">Na prática, isso pode ser perigoso.</p>
+        <p>
+          Uma pequena arritmia e um infarto em um eletrocardiograma podem compartilhar o mesmo
+          padrão ordinal, embora representem magnitudes e riscos completamente distintos.
+        </p>
+      </div>
+    </div>
+
+    <div class="card wpe-intro-slide__table-card">
+      <div class="permutation-slide__label">Exemplo orientador</div>
+      <p class="wpe-intro-slide__table-lead">
+        Todos os subconjuntos abaixo levam à mesma permutação <span class="accent">\((0,2,1)\)</span>,
+        mas não representam a mesma intensidade dinâmica.
+      </p>
+
+      <div class="wpe-intro-slide__table">
+        <div class="wpe-intro-slide__table-head">Subconjunto</div>
+        <div class="wpe-intro-slide__table-head">\(\pi\)</div>
+
+        <div class="method-slide__mono">\((1,4,2)\)</div>
+        <div class="method-slide__mono">\((0,2,1)\)</div>
+
+        <div class="method-slide__mono">\((0.001,100,0.5)\)</div>
+        <div class="method-slide__mono">\((0,2,1)\)</div>
+
+        <div class="method-slide__mono">\((10,100,50)\)</div>
+        <div class="method-slide__mono">\((0,2,1)\)</div>
+
+        <div class="method-slide__mono">\((2.5,9.8,4.1)\)</div>
+        <div class="method-slide__mono">\((0,2,1)\)</div>
+
+        <div class="method-slide__mono">\((-50,200,0)\)</div>
+        <div class="method-slide__mono">\((0,2,1)\)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wpe-intro-slide__stage wpe-intro-slide__stage--math">
+    <div class="wpe-intro-slide__copy">
+      <div class="kicker">WPE</div>
+      <h2>Entropia de Permutação Ponderada.</h2>
+      <p>
+        A ideia é incorporar informação de amplitude ao cálculo da PE, ponderando a probabilidade
+        de cada padrão pela variância do segmento correspondente.
+      </p>
+
+      <div class="card wpe-intro-slide__callout">
+        <p class="bigline">Agora cada ocorrência ordinal recebe um peso.</p>
+        <p>
+          Janelas com flutuações mais intensas contribuem mais para a distribuição final da WPE.
+        </p>
+      </div>
+    </div>
+
+    <div class="card wpe-intro-slide__math-card">
+      <div class="permutation-slide__label">Probabilidade ponderada</div>
+      <p class="wpe-intro-slide__math">\[
+        p(\pi_i)=\frac{\sum_{s,\ \pi_s=\pi_i} w_s}{\sum_s w_s}
+      \]</p>
+
+      <div class="permutation-slide__label">Peso do segmento</div>
+      <p class="wpe-intro-slide__math">\[
+        w_s=\frac{1}{d}\sum_{i=0}^{d-1}\left(x_{s+i}-\langle x_s\rangle\right)^2
+      \]</p>
+
+      <p class="wpe-intro-slide__foot">
+        Aqui, <span class="accent">\(w_s\)</span> é a variância local do segmento, e
+        <span class="accent">\(\langle x_s\rangle\)</span> é a média desse segmento.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,126 @@
+<section class="slide gwpe-bridge-slide"
+  data-note="Apresente a GWPE como a continuação natural da disputa entre PE e WPE: ela percorre continuamente diferentes intensidades de flutuação."
+  data-stage-count="1">
+  <div class="gwpe-bridge-slide__stage gwpe-bridge-slide__stage--intro">
+    <div class="gwpe-bridge-slide__copy">
+      <div class="kicker">GWPE</div>
+      <h2>Metodologia GWPE</h2>
+      <p class="gwpe-bridge-slide__lead">
+        A proposta agora é <span class="accent">varrer continuamente o espectro das amplitudes</span>.
+        Em vez de fixar uma única ênfase, a medida passa a explorar diferentes escalas de
+        flutuação dentro da mesma família ordinal.
+      </p>
+
+      <div class="card gwpe-bridge-slide__callout">
+        <p class="bigline">A ordem continua sendo preservada.</p>
+        <p>
+          O que muda é <span class="accent">o quanto cada tipo de flutuação ganha destaque</span>
+          ao longo dessa varredura.
+        </p>
+      </div>
+    </div>
+
+    <div class="card gwpe-bridge-slide__lens">
+      <div class="gwpe-bridge-slide__visual-label">Leitura intuitiva</div>
+      <div class="gwpe-bridge-slide__lens-title">Lente de variância sobre padrões ordinais</div>
+      <div class="gwpe-bridge-slide__lens-subtitle">
+        Série com 40 pontos; janela de 3 pontos; passo 1; total de 38 janelas.
+      </div>
+
+      <svg class="gwpe-bridge-slide__lens-svg" viewBox="0 0 1120 390" aria-hidden="true">
+        <path class="gwpe-bridge-slide__lens-base"></path>
+        <g class="gwpe-bridge-slide__lens-segments"></g>
+        <g class="gwpe-bridge-slide__lens-points"></g>
+      </svg>
+
+      <div class="gwpe-bridge-slide__lens-weights"></div>
+
+      <div class="gwpe-bridge-slide__lens-slider">
+        <div class="gwpe-bridge-slide__lens-track">
+          <div class="gwpe-bridge-slide__lens-knob"></div>
+        </div>
+
+        <div class="gwpe-bridge-slide__lens-labels">
+          <span>favorece baixa variância</span>
+          <span>favorece alta variância</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gwpe-bridge-slide__stage gwpe-bridge-slide__stage--focus">
+    <div class="card gwpe-bridge-slide__equation-card">
+      <div class="gwpe-bridge-slide__visual-label">Distribuição generalizada</div>
+      <div class="gwpe-bridge-slide__equation-pill">ordem ordinal + escala de flutuação</div>
+      <p class="gwpe-bridge-slide__equation-lead">
+        A contribuição de cada segmento passa a depender da sua variância elevada por
+        <span class="method-slide__mono">\(q/2\)</span>.
+      </p>
+      <p class="gwpe-bridge-slide__equation">
+        \[
+        p(\pi_i, q)=
+        \frac{\sum\nolimits_{s,\;\pi_s=\pi_i}^{\prime} w_s^{q/2}}
+        {\sum\nolimits_s^{\prime} w_s^{q/2}}
+        \]
+      </p>
+      <p class="gwpe-bridge-slide__visual-note">
+        A distribuição continua ordinal, mas a sensibilidade às flutuações agora é
+        escolhida explicitamente por <span class="accent">\(q\)</span>.
+      </p>
+    </div>
+
+    <div class="card gwpe-bridge-slide__spectrum-card">
+      <div class="gwpe-bridge-slide__visual-label">3. Varrendo o espectro de flutuações</div>
+      <p class="gwpe-bridge-slide__lead gwpe-bridge-slide__lead--compact">
+        O mesmo padrão ordinal pode ser analisado com ênfase em flutuações
+        de menor ou maior intensidade.
+      </p>
+
+      <div class="gwpe-bridge-slide__q-spectrum">
+        <div class="gwpe-bridge-slide__q-head">
+          <div>
+            <strong>\(q \rightarrow -\infty\)</strong>
+            <span>predomínio de flutuações de baixa intensidade</span>
+          </div>
+          <div>
+            <strong>\(q \rightarrow +\infty\)</strong>
+            <span>predomínio de flutuações de alta intensidade</span>
+          </div>
+        </div>
+
+        <div class="gwpe-bridge-slide__q-rail">
+          <span>\(-\infty\)</span>
+          <span>\(0\)</span>
+          <span>\(2\)</span>
+          <span>\(+\infty\)</span>
+        </div>
+
+        <div class="gwpe-bridge-slide__q-foot">
+          <span>baixa intensidade</span>
+          <span>PE</span>
+          <span>WPE</span>
+          <span>alta intensidade</span>
+        </div>
+      </div>
+
+      <div class="gwpe-bridge-slide__q-cases">
+        <div class="card gwpe-bridge-slide__q-case">
+          <strong>\(q = 0\)</strong>
+          <span>todos os pesos viram 1</span>
+          <small>PE clássica</small>
+        </div>
+        <div class="card gwpe-bridge-slide__q-case">
+          <strong>\(q = 2\)</strong>
+          <span>peso pela variância</span>
+          <small>WPE clássica</small>
+        </div>
+      </div>
+
+      <p class="gwpe-bridge-slide__note">
+        Para <span class="method-slide__mono">\(q &lt; 0\)</span>, segmentos com
+        <span class="method-slide__mono">\(w_s = 0\)</span> devem ser omitidos para evitar
+        divergência na ponderação.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,754 @@
+﻿01.html:
+  <div>
+        <strong>InstituiÃ§Ã£o:</strong><br>
+      </div>
+        <strong>Programa:</strong><br>
+      </div>
+        <strong>Orientador:</strong><br>
+      </div>
+        <strong>Linha de pesquisa:</strong><br>
+      </div>
+    </div>
+  </div>
+02.html:
+  <div>
+    <div class="kicker">Projeto de tese</div>
+    <h1>Um tÃ­tulo de 3 linhas que me faÃ§a parecer inteligente e que ninguÃ©m entenda nada</h1>
+  </div>
+03.html:
+    <div class="kicker">Sumário</div>
+    <h2>Roteiro da apresentação</h2>
+    <p>
+  </div>
+      <span>01</span>
+      <strong>Introdução</strong>
+    </div>
+      <span>02</span>
+      <strong>Extração de dados</strong>
+    </div>
+      <span>03</span>
+      <strong>Primeiro artigo</strong>
+    </div>
+      <span>04</span>
+      <strong>Segundo artigo</strong>
+    </div>
+      <span>05</span>
+      <strong>Metas</strong>
+    </div>
+      <span>06</span>
+      <strong>Agradecimentos</strong>
+    </div>
+      <span>07</span>
+      <strong>Referências</strong>
+    </div>
+  </div>
+04-title.html:
+    <div class="article-title-slide__marker">01</div>
+    <div class="kicker">Seção inicial</div>
+    <h1>Introdução</h1>
+    <p>Contexto, motivação e pergunta central</p>
+    <div class="article-title-slide__rule" aria-hidden="true"></div>
+  </div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+04.html:
+    <div class="kicker">DinÃ¢mica populacional</div>
+    <h2>O que Ã© dinÃ¢mica populacional?</h2>
+      <span>interaÃ§Ãµes entre indivÃ­duos geram padrÃµes</span>,
+  </div>
+      <div class="population-slide__label">Exemplo 1</div>
+      <h3>Crescimento</h3>
+      <p>VariaÃ§Ãµes no tamanho populacional ao longo do tempo, considerando natalidade, mortalidade e limites do ambiente.</p>
+    </div>
+      <div class="population-slide__label">Exemplo 2</div>
+      <h3>DistribuiÃ§Ã£o</h3>
+      <p>Como os indivÃ­duos se espalham no espaÃ§o, revelando padrÃµes de concentraÃ§Ã£o, dispersÃ£o e ocupaÃ§Ã£o do territÃ³rio.</p>
+    </div>
+      <div class="population-slide__label">Exemplo 3</div>
+      <h3>Comportamento coletivo</h3>
+      <p>InteraÃ§Ãµes locais gerando organizaÃ§Ã£o global, como em cardumes, bandos e multidÃµes.</p>
+    </div>
+  </div>
+05.html:
+    <div class="kicker">MudanÃ§a de pesquisa</div>
+    <h2>Pesquisa anterior</h2>
+  </div>
+        <div class="masters-slide__eyebrow">MÃ©todo 1</div>
+        <h3>DFA</h3>
+        <p>Observa-se anticorrelaÃ§Ã£o robusta nas sÃ©ries temporais, com intensidade decrescente em funÃ§Ã£o da taxa de mutaÃ§Ã£o.</p>
+      </div>
+        <div class="masters-slide__eyebrow">MÃ©todo 2</div>
+        <h3>MF-DFA</h3>
+        <p>A multifractalidade do sistema diminui com o aumento da taxa de mutaÃ§Ã£o, indicando menor complexidade nas flutuaÃ§Ãµes.</p>
+      </div>
+    </div>
+  </div>
+06.html:
+      <div class="transition-slide__label">Gancho para o prÃ³ximo passo</div>
+    </div>
+  </div>
+      <div class="shoal-canvas-widget__glow" aria-hidden="true"></div>
+    </div>
+  </div>
+07.html:
+  <div>
+    <div class="kicker">Experimento 5.1</div>
+    <h2>ReferÃªncia experimental na literatura</h2>
+    <p>
+      <strong>DOI:</strong> 10.1140/epje/s10189-024-00423-w<br>
+      <strong>Tema central:</strong> anÃ¡lise das flutuaÃ§Ãµes multifractais em sÃ©ries temporais de polarizaÃ§Ã£o de zebrafish.
+    </div>
+  </div>
+      <div class="kicker" style="margin-bottom:0.6rem;">Contexto</div>
+    </div>
+      <div class="kicker" style="margin-bottom:0.6rem;">RelevÃ¢ncia</div>
+    </div>
+      <div class="kicker" style="margin-bottom:0.6rem;">Gancho</div>
+    </div>
+  </div>
+08.html:
+    <div class="kicker">Experimento 5.1A</div>
+    <h2>zebrafish (Danio rerio)</h2>
+    <p>
+    </div>
+  </div>
+    <div class="card experiment-setup-slide__topic"><strong>1.</strong> Ã‰ um peixe de pequeno porte, atingindo cerca de 3 a 5 cm na fase adulta.</div>
+    <div class="card experiment-setup-slide__topic"><strong>2.</strong> Possui caracterÃ­sticas sociais de bando entre indivÃ­duos da mesma espÃ©cie.</div>
+    <div class="card experiment-setup-slide__topic"><strong>3.</strong> Alta resistÃªncia ambiental, baixo custo de aquisiÃ§Ã£o e semelhanÃ§a genÃ´mica com humanos.</div>
+    <div class="card experiment-setup-slide__topic"><strong>4.</strong> Os animais utilizados possuem cerca de 1 ano e 7 meses de vida.</div>
+    <div class="card experiment-setup-slide__topic"><strong>5.</strong> SÃ£o mantidos em quarentena por 60 dias para eliminar possÃ­veis problemas de saÃºde.</div>
+  </div>
+09.html:
+    <div class="kicker">Experimento 5.2</div>
+    <h2>Como o experimento Ã© estruturado</h2>
+    <p>
+  </div>
+    <div class="card experiment-setup-slide__topic"><strong>1.</strong> AquÃ¡rio circular de plÃ¡stico com fundo plano com 
+      diÃ¢metro de 50cm e uma lÃ¢mina dâ€™Ã¡gua de 5cm de espessura.</div>
+    <div class="card experiment-setup-slide__topic"><strong>2.</strong> A cÃ¢mera Canon 6D, foi colocada a uma altura de 1,45m e a um Ã¢ngulo de cerca de 90Âº em relaÃ§Ã£o a regiÃ£o a ser filmada.</div>
+    <div class="card experiment-setup-slide__topic"><strong>3.</strong> A base do experimento Ã© composta por um tampo de vidro temperado 8mm com dimensÃµes de 80x80cm, fixado Ã  mesa, iluminado por um plafom
+          com dimensÃµes de 60x60cm, 40 Watts de potÃªncia e luz branca 6500K.</div>
+    <div class="card experiment-setup-slide__topic"><strong>4.</strong> Para garantir a adaptaÃ§Ã£o dos peixes ao novo ambiente de filmagem, todos os animais passam
+          por um perÃ­odo de aclimataÃ§Ã£o de 10 minutos sobre a base jÃ¡ iluminada.</div>
+    <div class="card experiment-setup-slide__topic"><strong>5.</strong> Captura de vÃ­deos Ã  30 fps e resoluÃ§Ã£o em full HD (1920 x 1080).</div>
+  </div>
+10.html:
+    <div class="kicker">Experimento 5</div>
+    <h2>DelimitaÃ§Ãµes do experimento</h2>
+    </div>
+  </div>
+11.html:
+  <div>
+    <div class="kicker">Experimento 5.3</div>
+    <h2>O experimento vira dado</h2>
+    <p>Depois do rastreamento, o movimento individual pode ser convertido em sÃ©ries temporais observÃ¡veis, como as coordenadas <span class="accent">x(t)</span> e <span class="accent">y(t)</span>.</p>
+      <div class="step"><div class="num">1</div><div class="card">Software IdTracker</div></div>
+      <div class="step"><div class="num">2</div><div class="card">A centralizaÃ§Ã£o do sistema foi feita no centro geomÃ©trico da arena</div></div>
+      <div class="step"><div class="num">3</div><div class="card">ConstruÃ§Ã£o das sÃ©ries temporais X e Y de cada indivÃ­duo ao longo de todo o vÃ­deo</div></div>
+    </div>
+  </div>
+    </div>
+        <div class="experiment-graph__label">x(t)</div>
+      </div>
+        <div class="experiment-graph__label">y(t)</div>
+      </div>
+    </div>
+  </div>
+12.html:
+    <span class="kicker">Uma mesma ideia, três linguagens</span>
+      <div class="entropy-timeline-slide__track" aria-hidden="true"></div>
+    </div>
+  </div>
+    <div class="entropy-timeline-slide__area" id="detail-area">Termodinâmica</div>
+    <div class="entropy-timeline-slide__year" id="detail-year">1850</div>
+13.html:
+    <div class="article-title-slide__marker">01</div>
+    <div class="kicker">Primeiro artigo</div>
+    <h1>Primeiro artigo</h1>
+    <p>Entropia de permutação generalizada</p>
+    <div class="article-title-slide__rule" aria-hidden="true"></div>
+  </div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+14.html:
+  <div>
+    <div class="kicker">PE, WPE e GWPE</div>
+    <h2>Nem toda incerteza Ã© igual</h2>
+    <p>Permutation Entropy observa padrÃµes de ordem. Weighted PE adiciona o peso da amplitude. GWPE generaliza a sensibilidade do mÃ©todo.</p>
+  </div>
+    <div class="card mini"><span>PE<br><span class="accent">ordem temporal</span></span></div>
+    <div class="card mini"><span>WPE<br><span class="yellow">ordem + magnitude</span></span></div>
+    <div class="card mini"><span>GWPE<br><span class="pink">sensibilidade ajustÃ¡vel</span></span></div>
+  </div>
+15.html:
+    <div class="kicker">PE</div>
+    <h2>Entropia de PermutaÃ§Ã£o</h2>
+    <p>
+      <p>em vez de olhar os nÃºmeros em si, observamos <span class="accent">a ordem local dos valores</span>.</p>
+    </div>
+  </div>
+      <div class="method-slide__label">Problema</div>
+      <p>Suavizar a sÃ©rie pode reduzir ruÃ­do, mas tambÃ©m pode destruir a dinÃ¢mica original.</p>
+    </div>
+      <div class="method-slide__label">Ideia</div>
+      <p>Substituir valores por padrÃµes de ordem, comparando apenas relaÃ§Ãµes do tipo maior ou menor.</p>
+    </div>
+      <div class="method-slide__label">Vantagem</div>
+      <p>O mÃ©todo se torna mais robusto ao ruÃ­do e mais focado na previsibilidade do sistema.</p>
+    </div>
+  </div>
+16.html:
+    <div class="kicker">PE</div>
+    <h2>Metodologia PE</h2>
+  </div>
+    <div class="permutation-slide__label">Vetor de imersão</div>
+  </div>
+    <div class="permutation-slide__label">Parâmetros</div>
+    <p><span class="accent">m</span> define o tamanho da janela observada.</p>
+    <p><span class="accent">tau</span> define o espaçamento temporal entre os pontos dessa janela.</p>
+  </div>
+      <div class="permutation-slide__label">1. Série temporal</div>
+    </div>
+  </div>
+    <div class="permutation-slide__label">2. Segmentação</div>
+    </div>
+  </div>
+    <div class="permutation-slide__label">3. Ideia de \(\pi\)</div>
+        </div>
+      </div>
+        <div class="permutation-slide__label">Como interpretar</div>
+        <p>Para um dado <span class="accent">m</span>, existem <span class="accent">m!</span> permutações possíveis.</p>
+        <p>Elas podem ser representadas por símbolos, mas aqui vamos usar <span class="accent">sequencias numéricas</span>.</p>
+        <p>Assim, cada subconjunto da série recebe uma ordem \(\pi\).</p>
+      </div>
+    </div>
+  </div>
+      <div class="permutation-slide__label">Subconjuntos e permutações</div>
+    </div>
+      <div class="permutation-slide__label">Numero de ocorrências</div>
+    </div>
+  </div>
+17.html:
+    <div class="kicker">PE</div>
+    <h2>Da contagem Ã  entropia</h2>
+    <p>
+  </div>
+      <div class="pe-closure-slide__label">Contagem relativa</div>
+    </div>
+      <div class="pe-closure-slide__label">Entropia de PermutaÃ§Ã£o</div>
+    </div>
+  </div>
+18.html:
+    <div class="kicker">WPE</div>
+    <h2>Metodologia WPE</h2>
+  </div>
+    <div class="wpe-slide__label">Limitação da PE</div>
+  </div>
+    <div class="wpe-slide__label">Mesmo \(\pi\), amplitudes diferentes</div>
+    </div>
+  </div>
+      <div class="wpe-slide__label">Probabilidade ponderada</div>
+    </div>
+      <div class="wpe-slide__label">Peso por variância local</div>
+    </div>
+  </div>
+19-title.html:
+    <div class="article-title-slide__marker">02</div>
+    <div class="kicker">Segundo artigo</div>
+    <h1>Segundo artigo</h1>
+    <p>Transfer Entropy</p>
+    <div class="article-title-slide__rule" aria-hidden="true"></div>
+  </div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+19.html:
+    <div class="kicker">Transfer Entropy</div>
+    <h2>Como medir influência direcional no tempo?</h2>
+  </div>
+    <div class="te-slide__label">Apresentação da TE</div>
+      <span>Y fala algo sobre o futuro de X?</span>
+      <strong>\(Y_{passado} \to X_{futuro}\)</strong>
+    </div>
+  </div>
+    <div class="te-slide__label">Intuição do cálculo</div>
+        <span>Passado de X</span>
+        <strong>\(X_{t-k}^{(k)}\)</strong>
+      </div>
+      <div class="te-slide__plus">+</div>
+        <span>Passado de Y</span>
+        <strong>\(Y_{t-l}^{(l)}\)</strong>
+      </div>
+      <div class="te-slide__arrow">-&gt;</div>
+        <span>Futuro de X</span>
+        <strong>\(X_t\)</strong>
+      </div>
+    </div>
+  </div>
+    <div class="te-slide__label">Formalmente</div>
+    </div>
+      <p><span class="accent">Antes:</span> incerteza sobre \(X_t\) usando apenas \(X\).</p>
+      <p><span class="yellow">Depois:</span> incerteza sobre \(X_t\) depois de incluir \(Y\).</p>
+      <p><span class="pink">TE:</span> a redução de incerteza atribuída ao passado de \(Y\).</p>
+    </div>
+  </div>
+      <div class="te-slide__label">Na prática</div>
+      <p>
+      <p>
+    </div>
+      <div class="edge" style="left:23%;top:30%;width:38%;transform:rotate(20deg)"></div>
+      <div class="edge" style="left:31%;top:65%;width:34%;transform:rotate(-38deg)"></div>
+      <div class="edge" style="left:47%;top:38%;width:28%;transform:rotate(48deg)"></div>
+      <div class="edge" style="left:23%;top:30%;width:45%;transform:rotate(64deg)"></div>
+      <div class="node" style="left:21%;top:27%"></div>
+      <div class="node" style="left:60%;top:40%;background:var(--yellow)"></div>
+      <div class="node" style="left:32%;top:66%;background:var(--pink)"></div>
+      <div class="node" style="left:72%;top:69%;background:var(--green)"></div>
+      <div class="node" style="left:46%;top:23%"></div>
+    </div>
+  </div>
+20-gwpe.html:
+    <div class="kicker">GWPE</div>
+    <h2>Generalized Weighted Permutation Entropy</h2>
+  </div>
+      <div class="wpe-slide__label">1. Ideia central</div>
+    </div>
+      <div class="wpe-slide__label">Leitura</div>
+        <span>padrão ordinal</span>
+        <span>\(\pi_t\)</span>
+        <span>frequência</span>
+        <span>\(p(\pi)\)</span>
+        <span>entropia</span>
+        <span>\(H\)</span>
+      </div>
+    </div>
+  </div>
+      <div class="wpe-slide__label">2. Peso local</div>
+        <span>janela suave</span>
+        <span>peso baixo</span>
+        <span>janela intensa</span>
+        <span>peso alto</span>
+      </div>
+    </div>
+      <div class="wpe-slide__label">Probabilidade ponderada</div>
+    </div>
+  </div>
+      <div class="wpe-slide__label">3. Entropia GWPE</div>
+    </div>
+      <div class="wpe-slide__label">Normalização</div>
+    </div>
+  </div>
+20-title.html:
+  <div>
+    <div class="kicker">Novo slide 20</div>
+    <h1>Conteúdo a adicionar</h1>
+  </div>
+20.html:
+    <div class="kicker">Discretização e TE</div>
+    <h2>Metodologia aplicada</h2>
+  </div>
+        <div class="phi-slide__label">1. Antes do \(\phi_i(t)\)</div>
+        <p>
+        <p>
+      </div>
+          <div class="phi-intro-formula__label">Da posição para a velocidade</div>
+          \]</div>
+        </div>
+          <strong>Ideia central</strong>
+          <p>
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+      <div class="phi-slide__label">2. Extração de \(\phi_i(t)\)</div>
+      <p>
+    </div>
+  </div>
+      <div class="discretization20__label">3. Discretização por histograma</div>
+    </div>
+      <div class="phi-slide__label">Leitura do procedimento</div>
+      <h3>Discretizar e trocar valor real por categoria.</h3>
+      <p>
+        <div><strong>1</strong><span>observa-se o valor de \(\phi_i(t)\)</span></div>
+        <div><strong>2</strong><span>identifica-se em qual faixa ele caiu</span></div>
+        <div><strong>3</strong><span>substitui-se o valor pelo código da faixa</span></div>
+      </div>
+        <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span>
+      </div>
+      <p>
+    </div>
+  </div>
+21-gwpe-results.html:
+    <div class="kicker">Resultados GWPE</div>
+    <h2>Resultados da entropia de permutação ponderada</h2>
+  </div>
+    </div>
+      <div class="te-results-slide__label">Grafo</div>
+      <h3>Panorama dos estados dinâmicos.</h3>
+      <p>
+    </div>
+  </div>
+    <div class="te-results-slide__metric-number">01</div>
+      <div class="te-results-slide__label">Métrica 1</div>
+      <h3>Valor medio de GWPE</h3>
+      <p>
+      \]</div>
+    </div>
+  </div>
+    </div>
+      <div class="te-results-slide__label">Resultado métrica 1</div>
+      <h3>Condicoes com maior GWPE indicam dinâmica mais variada.</h3>
+      <p>
+    </div>
+  </div>
+    <div class="te-results-slide__metric-number">02</div>
+      <div class="te-results-slide__label">Métrica 2</div>
+      <h3>Variabilidade temporal</h3>
+      <p>
+      \]</div>
+    </div>
+  </div>
+    </div>
+      <div class="te-results-slide__label">Resultado métrica 2</div>
+      <h3>A variabilidade aponta transições dinâmicas.</h3>
+      <p>
+    </div>
+  </div>
+    <div class="te-results-slide__metric-number">03</div>
+      <div class="te-results-slide__label">Métrica 3</div>
+      <h3>Contraste entre condições</h3>
+      <p>
+      \]</div>
+    </div>
+  </div>
+      <span></span><span class="is-hot"></span><span></span><span class="is-cold"></span>
+      <span class="is-cold"></span><span></span><span class="is-mid"></span><span></span>
+      <span></span><span class="is-cold"></span><span></span><span class="is-hot"></span>
+      <span class="is-hot"></span><span></span><span class="is-cold"></span><span></span>
+    </div>
+      <div class="te-results-slide__label">Resultado métrica 3</div>
+      <h3>O contraste mostra onde a complexidade ordinal muda.</h3>
+      <p>
+    </div>
+  </div>
+21.html:
+    <div class="kicker">Matriz de Transfer Entropy</div>
+    <h2>Quem influência quem?</h2>
+  </div>
+      <div class="matrix-slide__label">1. Construção da matriz</div>
+      </div>
+          <p>
+          <p>
+        </div>
+            <div class="matrix-slide__formula-label">Estrutura</div>
+          </div>
+            <div class="matrix-slide__formula-label">Diagonal principal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <div class="matrix-slide__corner"></div>
+      <div class="matrix-slide__col-label">P1</div>
+      <div class="matrix-slide__col-label">P2</div>
+      <div class="matrix-slide__col-label">P3</div>
+      <div class="matrix-slide__col-label">P4</div>
+      <div class="matrix-slide__col-label">PN</div>
+      <div class="matrix-slide__row-label">P1</div>
+      <div class="matrix-slide__cell is-diagonal">0</div>
+      <div class="matrix-slide__cell is-mid">\(T_{12}\)</div>
+      <div class="matrix-slide__cell is-hot">\(T_{13}\)</div>
+      <div class="matrix-slide__cell is-cold">\(T_{14}\)</div>
+      <div class="matrix-slide__cell is-mid">\(T_{1N}\)</div>
+      <div class="matrix-slide__row-label">P2</div>
+      <div class="matrix-slide__cell is-cold">\(T_{21}\)</div>
+      <div class="matrix-slide__cell is-diagonal">0</div>
+      <div class="matrix-slide__cell is-mid">\(T_{23}\)</div>
+      <div class="matrix-slide__cell is-hot">\(T_{24}\)</div>
+      <div class="matrix-slide__cell is-cold">\(T_{2N}\)</div>
+      <div class="matrix-slide__row-label">P3</div>
+      <div class="matrix-slide__cell is-mid">\(T_{31}\)</div>
+      <div class="matrix-slide__cell is-cold">\(T_{32}\)</div>
+      <div class="matrix-slide__cell is-diagonal">0</div>
+      <div class="matrix-slide__cell is-mid">\(T_{34}\)</div>
+      <div class="matrix-slide__cell is-hot">\(T_{3N}\)</div>
+      <div class="matrix-slide__row-label">P4</div>
+      <div class="matrix-slide__cell is-hot">\(T_{41}\)</div>
+      <div class="matrix-slide__cell is-mid">\(T_{42}\)</div>
+      <div class="matrix-slide__cell is-cold">\(T_{43}\)</div>
+      <div class="matrix-slide__cell is-diagonal">0</div>
+      <div class="matrix-slide__cell is-mid">\(T_{4N}\)</div>
+      <div class="matrix-slide__row-label">PN</div>
+      <div class="matrix-slide__cell is-cold">\(T_{N1}\)</div>
+      <div class="matrix-slide__cell is-hot">\(T_{N2}\)</div>
+      <div class="matrix-slide__cell is-mid">\(T_{N3}\)</div>
+      <div class="matrix-slide__cell is-cold">\(T_{N4}\)</div>
+      <div class="matrix-slide__cell is-diagonal">0</div>
+    </div>
+      <div class="matrix-slide__label">Leitura geral</div>
+      <p>
+    </div>
+  </div>
+      <div class="matrix-slide__corner"></div>
+      <div class="matrix-slide__col-label">P1</div>
+      <div class="matrix-slide__col-label">P2</div>
+      <div class="matrix-slide__col-label">P3</div>
+      <div class="matrix-slide__col-label">P4</div>
+      <div class="matrix-slide__col-label">PN</div>
+      <div class="matrix-slide__row-label">P1</div>
+      <div class="matrix-slide__cell is-muted">0</div>
+      <div class="matrix-slide__cell is-muted">\(T_{12}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{13}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{14}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{1N}\)</div>
+      <div class="matrix-slide__row-label is-active">Pi</div>
+      <div class="matrix-slide__cell is-row-focus">\(T_{i1}\)</div>
+      <div class="matrix-slide__cell is-row-focus">\(T_{i2}\)</div>
+      <div class="matrix-slide__cell is-row-focus">\(T_{i3}\)</div>
+      <div class="matrix-slide__cell is-row-focus">...</div>
+      <div class="matrix-slide__cell is-row-focus">\(T_{iN}\)</div>
+      <div class="matrix-slide__row-label">P3</div>
+      <div class="matrix-slide__cell is-muted">\(T_{31}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{32}\)</div>
+      <div class="matrix-slide__cell is-muted">0</div>
+      <div class="matrix-slide__cell is-muted">\(T_{34}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{3N}\)</div>
+      <div class="matrix-slide__row-label">...</div>
+      <div class="matrix-slide__cell is-muted">...</div>
+      <div class="matrix-slide__cell is-muted">...</div>
+      <div class="matrix-slide__cell is-muted">...</div>
+      <div class="matrix-slide__cell is-muted">0</div>
+      <div class="matrix-slide__cell is-muted">...</div>
+      <div class="matrix-slide__row-label">PN</div>
+      <div class="matrix-slide__cell is-muted">\(T_{N1}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{N2}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{N3}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{N4}\)</div>
+      <div class="matrix-slide__cell is-muted">0</div>
+    </div>
+      <div class="matrix-slide__label">Linha = emissor</div>
+      <p>
+    </div>
+  </div>
+      <div class="matrix-slide__corner"></div>
+      <div class="matrix-slide__col-label">P1</div>
+      <div class="matrix-slide__col-label is-active">Pj</div>
+      <div class="matrix-slide__col-label">P3</div>
+      <div class="matrix-slide__col-label">P4</div>
+      <div class="matrix-slide__col-label">PN</div>
+      <div class="matrix-slide__row-label">P1</div>
+      <div class="matrix-slide__cell is-muted">0</div>
+      <div class="matrix-slide__cell is-col-focus">\(T_{1j}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{13}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{14}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{1N}\)</div>
+      <div class="matrix-slide__row-label">P2</div>
+      <div class="matrix-slide__cell is-muted">\(T_{21}\)</div>
+      <div class="matrix-slide__cell is-col-focus">\(T_{2j}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{23}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{24}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{2N}\)</div>
+      <div class="matrix-slide__row-label">P3</div>
+      <div class="matrix-slide__cell is-muted">\(T_{31}\)</div>
+      <div class="matrix-slide__cell is-col-focus">\(T_{3j}\)</div>
+      <div class="matrix-slide__cell is-muted">0</div>
+      <div class="matrix-slide__cell is-muted">\(T_{34}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{3N}\)</div>
+      <div class="matrix-slide__row-label">...</div>
+      <div class="matrix-slide__cell is-muted">...</div>
+      <div class="matrix-slide__cell is-col-focus">...</div>
+      <div class="matrix-slide__cell is-muted">...</div>
+      <div class="matrix-slide__cell is-muted">0</div>
+      <div class="matrix-slide__cell is-muted">...</div>
+      <div class="matrix-slide__row-label">PN</div>
+      <div class="matrix-slide__cell is-muted">\(T_{N1}\)</div>
+      <div class="matrix-slide__cell is-col-focus">\(T_{Nj}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{N3}\)</div>
+      <div class="matrix-slide__cell is-muted">\(T_{N4}\)</div>
+      <div class="matrix-slide__cell is-muted">0</div>
+    </div>
+      <div class="matrix-slide__label">Coluna = receptor</div>
+      <p>
+    </div>
+  </div>
+22.html:
+    <div class="kicker">Análise da TE</div>
+    <h2>Da matriz de TE para uma leitura de rede</h2>
+  </div>
+      <div class="te-analysis-slide__node te-analysis-slide__node--a">1</div>
+      <div class="te-analysis-slide__node te-analysis-slide__node--b">2</div>
+      <div class="te-analysis-slide__node te-analysis-slide__node--c">3</div>
+      <div class="te-analysis-slide__node te-analysis-slide__node--d">4</div>
+    </div>
+      <div class="te-analysis-slide__label">1. O que é grafo</div>
+      <h3>Um grafo resume quem influência quem.</h3>
+      <p>
+      \]</div>
+    </div>
+  </div>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="te-analysis-slide__window te-analysis-slide__window--one">janela 1</div>
+      <div class="te-analysis-slide__window te-analysis-slide__window--two">janela 2</div>
+      <div class="te-analysis-slide__window te-analysis-slide__window--three">janela 3</div>
+        <span>Grafo \(t_1\)</span>
+        <span>Grafo \(t_2\)</span>
+        <span>Grafo \(t_3\)</span>
+      </div>
+    </div>
+      <div class="te-analysis-slide__label">2. Sliding windows</div>
+      <h3>A rede pode mudar ao longo do tempo.</h3>
+      <p>
+      \]</div>
+    </div>
+  </div>
+      </div>
+        <span>baixo</span>
+        <span>esperado</span>
+        <span>alto</span>
+      </div>
+    </div>
+      <div class="te-analysis-slide__label">3. Referencial</div>
+      <h3>O grafo só faz sentido quando há uma base de comparação.</h3>
+      <p>
+        <span>rede observada</span>
+        <span>controle ou permutação</span>
+        <span>mudança temporal</span>
+      </div>
+    </div>
+  </div>
+23.html:
+    <div class="kicker">Resultados</div>
+    <h2>Resultados da rede de Transfer Entropy</h2>
+  </div>
+    </div>
+      <div class="te-results-slide__label">Grafo</div>
+      <h3>Mapa geral das influências estimadas.</h3>
+      <p>
+    </div>
+  </div>
+    <div class="te-results-slide__metric-number">01</div>
+      <div class="te-results-slide__label">Métrica 1</div>
+      <h3>Força de saída</h3>
+      <p>
+      \]</div>
+    </div>
+  </div>
+    </div>
+      <div class="te-results-slide__label">Resultado métrica 1</div>
+      <h3>Alguns indivíduos concentram maior emissao informacional.</h3>
+      <p>
+    </div>
+  </div>
+    <div class="te-results-slide__metric-number">02</div>
+      <div class="te-results-slide__label">Métrica 2</div>
+      <h3>Força de entrada</h3>
+      <p>
+      \]</div>
+    </div>
+  </div>
+    </div>
+      <div class="te-results-slide__label">Resultado métrica 2</div>
+      <h3>A recepção mostra quais indivíduos respondem mais ao grupo.</h3>
+      <p>
+    </div>
+  </div>
+    <div class="te-results-slide__metric-number">03</div>
+      <div class="te-results-slide__label">Métrica 3</div>
+      <h3>Assimetria direcional</h3>
+      <p>
+      \]</div>
+    </div>
+  </div>
+      <span></span><span class="is-hot"></span><span></span><span class="is-cold"></span>
+      <span class="is-cold"></span><span></span><span class="is-mid"></span><span></span>
+      <span></span><span class="is-cold"></span><span></span><span class="is-hot"></span>
+      <span class="is-hot"></span><span></span><span class="is-cold"></span><span></span>
+    </div>
+      <div class="te-results-slide__label">Resultado métrica 3</div>
+      <h3>A assimetria revela direções preferenciais de influência.</h3>
+      <p>
+    </div>
+  </div>
+24.html:
+  <div>
+    <div class="kicker">Novo slide 24</div>
+    <h1>Conteúdo a adicionar</h1>
+  </div>
+25.html:
+  <div>
+    <div class="kicker">Novo slide 25</div>
+    <h1>Conteúdo a adicionar</h1>
+  </div>
+26.html:
+  <div>
+    <div class="kicker">Novo slide 26</div>
+    <h1>Conteúdo a adicionar</h1>
+  </div>
+27.html:
+  <div>
+    <div class="kicker">Gancho final</div>
+    <h2>Da biologia para sistemas artificiais</h2>
+    <p>Se conseguimos medir como a informaÃ§Ã£o flui em cardumes reais, podemos perguntar como reproduzir isso em sistemas artificiais.</p>
+  </div>
+    <div class="card equation">medir -&gt; entender</div>
+    <div class="card equation">entender -&gt; simular</div>
+    <div class="card equation">simular -&gt; controlar</div>
+    <div class="card equation">controlar -&gt; projetar inteligÃªncia coletiva</div>
+  </div>
+28.html:
+  <div>
+    <div class="kicker">FinalizaÃ§Ã£o</div>
+    <h1>Eu nÃ£o estou sÃ³ estudando peixes.</h1>
+  </div>
+29.html:
+    <div class="kicker">Resultados Esperados</div>
+    <h2>Produtos previstos do projeto</h2>
+  </div>
+      <span>Categoria</span>
+      <span>NÃºmero esperado</span>
+    </div>
+      <span>Artigo cientÃ­fico</span>
+      <span>[  ]</span>
+    </div>
+      <span>ParticipaÃ§Ã£o em congresso</span>
+      <span>[  ]</span>
+    </div>
+      <span>Patente ou equivalente</span>
+      <span>[  ]</span>
+    </div>
+      <span>Livro ou capÃ­tulo de livro</span>
+      <span>[  ]</span>
+    </div>
+      <span>DissertaÃ§Ã£o de mestrado</span>
+      <span>[  ]</span>
+    </div>
+      <span>Tese de doutorado</span>
+      <span>[  ]</span>
+    </div>
+      <span>ParticipaÃ§Ã£o em editais</span>
+      <span>[  ]</span>
+    </div>
+      <span>Outras (especificar)</span>
+      <span>[  ]</span>
+    </div>
+  </div>
+30.html:
+    <div class="kicker">Agradecimentos</div>
+    <h1>Apoio e fomento Ã  pesquisa</h1>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>

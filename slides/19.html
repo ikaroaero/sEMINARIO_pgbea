@@ -1,0 +1,87 @@
+<section class="slide polarization-slide"
+  data-note="Apresente a polarização como a variável analisada: média vetorial das direções de movimento.">
+  <div class="polarization-slide__left">
+    <div class="kicker">Variável analisada</div>
+    <h2>Variável a ser analisada</h2>
+
+    <p class="polarization-slide__lead">
+      A grandeza observada é a <span class="accent">polarização do grupo</span>,
+      isto é, o quanto os vetores de velocidade dos indivíduos apontam, em média,
+      para a mesma direção.
+    </p>
+
+    <div class="card polarization-slide__equation-card">
+      <div class="polarization-slide__label">Definição</div>
+      <p class="polarization-slide__math">
+        \[
+        P = \frac{1}{N}\left|\sum_{i=1}^{N}\frac{\vec{v}_i}{|\vec{v}_i|}\right|
+        \]
+      </p>
+      <p class="polarization-slide__text">
+        onde <span class="method-slide__mono">\(\vec{v}_i\)</span> é o vetor velocidade
+        do <span class="method-slide__mono">\(i\)</span>-ésimo indivíduo em um grupo de
+        tamanho <span class="method-slide__mono">\(N\)</span>.
+      </p>
+    </div>
+
+    <div class="polarization-slide__reading">
+      <div class="card polarization-slide__state polarization-slide__state--aligned">
+        <div class="polarization-slide__state-head">
+          <strong>\(P \approx 1\)</strong>
+          <span>alinhamento alto</span>
+        </div>
+        <div class="polarization-slide__state-visual" aria-hidden="true">
+          <i>→</i>
+          <i>→</i>
+          <i>→</i>
+          <i>→</i>
+          <i>→</i>
+          <i>→</i>
+        </div>
+      </div>
+
+      <div class="card polarization-slide__state polarization-slide__state--disordered">
+        <div class="polarization-slide__state-head">
+          <strong>\(P \approx 0\)</strong>
+          <span>alinhamento baixo</span>
+        </div>
+        <div class="polarization-slide__state-visual polarization-slide__state-visual--mixed" aria-hidden="true">
+          <i>→</i>
+          <i>↗</i>
+          <i>↓</i>
+          <i>←</i>
+          <i>↙</i>
+          <i>↑</i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="polarization-slide__right">
+    <div class="card polarization-slide__visual">
+      <div class="sim-real-slide__label">Simulação</div>
+      <div class="polarization-slide__visual-head">
+        <h3>Representação da polarização</h3>
+        <p>alinhamento médio dos vetores de velocidade</p>
+      </div>
+
+      <div class="fish-demo polarization-slide__fish-demo">
+        <div class="shoal-canvas-widget" style="--shoal-size: min(100%, 440px);" aria-hidden="true">
+          <canvas class="shoal-canvas" data-fish-count="5" data-polarization-vectors="true" data-speed-factor="0.5"></canvas>
+          <div class="shoal-canvas-widget__glow"></div>
+        </div>
+      </div>
+
+      <div class="polarization-slide__meter" aria-hidden="true">
+        <div class="polarization-slide__meter-label">vetores individuais de velocidade</div>
+        <div class="polarization-slide__meter-track">
+          <span class="polarization-slide__meter-arrow"><i class="polarization-slide__meter-glyph">→</i></span>
+          <span class="polarization-slide__meter-arrow"><i class="polarization-slide__meter-glyph">→</i></span>
+          <span class="polarization-slide__meter-arrow"><i class="polarization-slide__meter-glyph">→</i></span>
+          <span class="polarization-slide__meter-arrow"><i class="polarization-slide__meter-glyph">→</i></span>
+          <span class="polarization-slide__meter-arrow polarization-slide__meter-arrow--soft"><i class="polarization-slide__meter-glyph">→</i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

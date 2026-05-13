@@ -1,0 +1,258 @@
+<section class="slide te-sequence-slide"
+  data-stage-count="6"
+  data-note="Avance por cliques: primeiro construa as duas séries dos peixes e seus rastros; depois formalize a TE; em seguida mostre a matriz par a par; por fim explique leitura por linha e coluna.">
+
+  <div class="te-sequence-slide__stage te-sequence-slide__stage--setup">
+    <div class="te-sequence-slide__head">
+      <div class="kicker">Transfer Entropy · construção</div>
+      <h2>Entropia de transferência</h2>
+      <p>
+        Antes da fórmula, definimos as duas séries temporais e a memória usada para
+        comparar passado e futuro.
+      </p>
+    </div>
+
+    <div class="te-sequence-slide__fish-grid">
+      <div class="te-sequence-slide__step-list">
+        <div class="card te-sequence-slide__step-item te-sequence-slide__step-item--1">
+          <strong>1</strong>
+          <p><span class="accent">X</span>: peixe azul, observado no instante atual.</p>
+        </div>
+        <div class="card te-sequence-slide__step-item te-sequence-slide__step-item--2">
+          <strong>2</strong>
+          <p><span class="yellow">Y</span>: peixe amarelo aparece como segundo indivíduo.</p>
+        </div>
+        <div class="card te-sequence-slide__step-item te-sequence-slide__step-item--3">
+          <strong>3</strong>
+          <p>As <span class="yellow">K</span> posições anteriores de <span class="accent">X</span> formam sua memória.</p>
+        </div>
+        <div class="card te-sequence-slide__step-item te-sequence-slide__step-item--4">
+          <strong>4</strong>
+          <p>As <span class="yellow">L</span> posições anteriores de <span class="yellow">Y</span> completam a comparação temporal.</p>
+        </div>
+      </div>
+
+      <div class="card te-sequence-slide__fish-board">
+        <canvas class="te-dual-fish-canvas" aria-label="Simulação com peixe azul, peixe amarelo e rastros temporais"></canvas>
+      </div>
+    </div>
+
+    <div class="card te-sequence-slide__statement">
+      A Transfer Entropy mede quanto os <span class="yellow">L</span> passos passados de
+      <span class="accent">Y</span> reduzem a incerteza sobre o futuro de
+      <span class="accent">X</span>, além do que já é explicado pelos
+      <span class="yellow">K</span> passos passados de <span class="accent">X</span>.
+    </div>
+  </div>
+
+  <div class="te-sequence-slide__stage te-sequence-slide__stage--formal">
+    <div class="te-sequence-slide__head te-sequence-slide__head--center">
+      <div class="kicker">Transfer Entropy · formalização</div>
+      <h2>Redução de incerteza condicional</h2>
+    </div>
+
+    <div class="card te-sequence-slide__formal-panel">
+      <div class="te-sequence-slide__math-stack">
+        <div class="te-sequence-slide__math-block">
+          <span>informação mútua condicional</span>
+          <p class="te-slide__math">\[
+            T_{Y \to X}^{(k,l)}(t)
+            = I\left(X_t;\;Y_{t-l}^{(l)}\mid X_{t-k}^{(k)}\right)
+          \]</p>
+        </div>
+
+        <div class="te-sequence-slide__math-block te-sequence-slide__math-block--wide">
+          <span>diferença entre entropias condicionais</span>
+          <p class="te-slide__math te-slide__math--small">\[
+            T_{Y \to X}^{(k,l)}(t)
+            = H\left(X_t\mid X_{t-k}^{(k)}\right)
+            - H\left(X_t\mid X_{t-k}^{(k)},Y_{t-l}^{(l)}\right)
+          \]</p>
+        </div>
+      </div>
+
+      <div class="te-sequence-slide__notes">
+        <p>
+          A primeira expressão apresenta a TE como informação mútua condicional.
+        </p>
+        <p>
+          A segunda mostra a mesma ideia como redução de incerteza sobre o futuro de
+          <span class="accent">X</span> após incluir o passado de <span class="accent">Y</span>.
+        </p>
+        <p class="te-sequence-slide__aside">
+          Na literatura, é comum adotar <span class="yellow">k = l</span>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="te-sequence-slide__stage te-sequence-slide__stage--pairs">
+    <div class="te-sequence-slide__pair-grid">
+      <div class="card te-sequence-slide__pair-copy">
+        <div class="kicker">Interação par a par</div>
+        <h2>A TE mede influências direcionais entre pares.</h2>
+        <div class="te-sequence-slide__pairs">
+          <span>\(T_{\text{peixe 1}\to\text{peixe 2}}\)</span>
+          <span>\(T_{\text{peixe 2}\to\text{peixe 1}}\)</span>
+          <span>\(T_{\text{peixe 1}\to\text{peixe 1}} = 0\)</span>
+        </div>
+        <p>
+          Como a influência é direcional, trocar emissor e receptor muda o valor estimado.
+        </p>
+        <p class="te-sequence-slide__callout">
+          Para <span class="accent">N</span> peixes, calcular todos os pares produz uma
+          <span class="yellow">matriz de Transfer Entropy</span>.
+        </p>
+      </div>
+
+      <div class="matrix-slide__matrix-board te-sequence-slide__matrix-board">
+        <div class="matrix-slide__corner"></div>
+        <div class="matrix-slide__col-label">P1</div>
+        <div class="matrix-slide__col-label">P2</div>
+        <div class="matrix-slide__col-label">P3</div>
+        <div class="matrix-slide__col-label">P4</div>
+        <div class="matrix-slide__col-label">PN</div>
+
+        <div class="matrix-slide__row-label">P1</div>
+        <div class="matrix-slide__cell is-diagonal">0</div>
+        <div class="matrix-slide__cell is-mid">\(T_{12}\)</div>
+        <div class="matrix-slide__cell is-hot">\(T_{13}\)</div>
+        <div class="matrix-slide__cell is-cold">\(T_{14}\)</div>
+        <div class="matrix-slide__cell is-mid">\(T_{1N}\)</div>
+
+        <div class="matrix-slide__row-label">P2</div>
+        <div class="matrix-slide__cell is-cold">\(T_{21}\)</div>
+        <div class="matrix-slide__cell is-diagonal">0</div>
+        <div class="matrix-slide__cell is-mid">\(T_{23}\)</div>
+        <div class="matrix-slide__cell is-hot">\(T_{24}\)</div>
+        <div class="matrix-slide__cell is-cold">\(T_{2N}\)</div>
+
+        <div class="matrix-slide__row-label">P3</div>
+        <div class="matrix-slide__cell is-mid">\(T_{31}\)</div>
+        <div class="matrix-slide__cell is-cold">\(T_{32}\)</div>
+        <div class="matrix-slide__cell is-diagonal">0</div>
+        <div class="matrix-slide__cell is-mid">\(T_{34}\)</div>
+        <div class="matrix-slide__cell is-hot">\(T_{3N}\)</div>
+
+        <div class="matrix-slide__row-label">P4</div>
+        <div class="matrix-slide__cell is-hot">\(T_{41}\)</div>
+        <div class="matrix-slide__cell is-mid">\(T_{42}\)</div>
+        <div class="matrix-slide__cell is-cold">\(T_{43}\)</div>
+        <div class="matrix-slide__cell is-diagonal">0</div>
+        <div class="matrix-slide__cell is-mid">\(T_{4N}\)</div>
+
+        <div class="matrix-slide__row-label">PN</div>
+        <div class="matrix-slide__cell is-cold">\(T_{N1}\)</div>
+        <div class="matrix-slide__cell is-hot">\(T_{N2}\)</div>
+        <div class="matrix-slide__cell is-mid">\(T_{N3}\)</div>
+        <div class="matrix-slide__cell is-cold">\(T_{N4}\)</div>
+        <div class="matrix-slide__cell is-diagonal">0</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="te-sequence-slide__stage te-sequence-slide__stage--reading">
+    <div class="te-sequence-slide__head te-sequence-slide__head--center">
+      <div class="kicker">Transfer Entropy · leitura da matriz</div>
+      <h2>Linha e coluna respondem perguntas diferentes</h2>
+    </div>
+
+    <div class="te-sequence-slide__reading-grid">
+      <div class="card te-sequence-slide__reading-card">
+        <div class="matrix-slide__label">Linha = emissor</div>
+        <div class="matrix-slide__matrix-board matrix-slide__matrix-board--sender te-sequence-slide__reading-board">
+          <div class="matrix-slide__corner"></div>
+          <div class="matrix-slide__col-label">P1</div>
+          <div class="matrix-slide__col-label is-active">Pi</div>
+          <div class="matrix-slide__col-label">P3</div>
+          <div class="matrix-slide__col-label">P4</div>
+          <div class="matrix-slide__col-label">PN</div>
+
+          <div class="matrix-slide__row-label">P1</div>
+          <div class="matrix-slide__cell is-muted">0</div>
+          <div class="matrix-slide__cell is-muted">\(T_{12}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{13}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{14}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{1N}\)</div>
+
+          <div class="matrix-slide__row-label is-active">Pi</div>
+          <div class="matrix-slide__cell is-row-focus">\(T_{i1}\)</div>
+          <div class="matrix-slide__cell is-diagonal">0</div>
+          <div class="matrix-slide__cell is-row-focus">\(T_{i3}\)</div>
+          <div class="matrix-slide__cell is-row-focus">...</div>
+          <div class="matrix-slide__cell is-row-focus">\(T_{iN}\)</div>
+
+          <div class="matrix-slide__row-label">P3</div>
+          <div class="matrix-slide__cell is-muted">\(T_{31}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{32}\)</div>
+          <div class="matrix-slide__cell is-muted">0</div>
+          <div class="matrix-slide__cell is-muted">\(T_{34}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{3N}\)</div>
+
+          <div class="matrix-slide__row-label">...</div>
+          <div class="matrix-slide__cell is-muted">...</div>
+          <div class="matrix-slide__cell is-muted">...</div>
+          <div class="matrix-slide__cell is-muted">...</div>
+          <div class="matrix-slide__cell is-muted">0</div>
+          <div class="matrix-slide__cell is-muted">...</div>
+
+          <div class="matrix-slide__row-label">PN</div>
+          <div class="matrix-slide__cell is-muted">\(T_{N1}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{N2}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{N3}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{N4}\)</div>
+          <div class="matrix-slide__cell is-muted">0</div>
+        </div>
+        <p>Ler uma linha responde: <span class="accent">para quem esse peixe envia informação?</span></p>
+      </div>
+
+      <div class="card te-sequence-slide__reading-card">
+        <div class="matrix-slide__label">Coluna = receptor</div>
+        <div class="matrix-slide__matrix-board matrix-slide__matrix-board--receiver te-sequence-slide__reading-board">
+          <div class="matrix-slide__corner"></div>
+          <div class="matrix-slide__col-label">P1</div>
+          <div class="matrix-slide__col-label is-active">Pj</div>
+          <div class="matrix-slide__col-label">P3</div>
+          <div class="matrix-slide__col-label">P4</div>
+          <div class="matrix-slide__col-label">PN</div>
+
+          <div class="matrix-slide__row-label">P1</div>
+          <div class="matrix-slide__cell is-muted">0</div>
+          <div class="matrix-slide__cell is-col-focus">\(T_{1j}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{13}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{14}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{1N}\)</div>
+
+          <div class="matrix-slide__row-label is-active">Pj</div>
+          <div class="matrix-slide__cell is-muted">\(T_{21}\)</div>
+          <div class="matrix-slide__cell is-diagonal">0</div>
+          <div class="matrix-slide__cell is-muted">\(T_{23}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{24}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{2N}\)</div>
+
+          <div class="matrix-slide__row-label">P3</div>
+          <div class="matrix-slide__cell is-muted">\(T_{31}\)</div>
+          <div class="matrix-slide__cell is-col-focus">\(T_{3j}\)</div>
+          <div class="matrix-slide__cell is-muted">0</div>
+          <div class="matrix-slide__cell is-muted">\(T_{34}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{3N}\)</div>
+
+          <div class="matrix-slide__row-label">...</div>
+          <div class="matrix-slide__cell is-muted">...</div>
+          <div class="matrix-slide__cell is-col-focus">...</div>
+          <div class="matrix-slide__cell is-muted">...</div>
+          <div class="matrix-slide__cell is-muted">0</div>
+          <div class="matrix-slide__cell is-muted">...</div>
+
+          <div class="matrix-slide__row-label">PN</div>
+          <div class="matrix-slide__cell is-muted">\(T_{N1}\)</div>
+          <div class="matrix-slide__cell is-col-focus">\(T_{Nj}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{N3}\)</div>
+          <div class="matrix-slide__cell is-muted">\(T_{N4}\)</div>
+          <div class="matrix-slide__cell is-muted">0</div>
+        </div>
+        <p>Ler uma coluna responde: <span class="accent">de quem esse peixe recebe informação?</span></p>
+      </div>
+    </div>
+  </div>
+</section>

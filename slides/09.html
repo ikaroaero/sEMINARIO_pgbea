@@ -1,0 +1,38 @@
+<section class="slide" data-note="Aqui você apresenta o experimento como transformação de comportamento em série temporal individual.">
+  <div>
+    <div class="kicker">Experimento 5.3</div>
+    <h2>O experimento vira dado</h2>
+    <p>Depois do rastreamento, o movimento individual pode ser convertido em séries temporais observáveis, como as coordenadas <span class="accent">x(t)</span> e <span class="accent">y(t)</span>.</p>
+    <div class="timeline">
+      <div class="step"><div class="num">1</div><div class="card">Software IdTracker</div></div>
+      <div class="step"><div class="num">2</div><div class="card">A centralização do sistema foi feita no centro geométrico da arena</div></div>
+      <div class="step"><div class="num">3</div><div class="card">Construção das séries temporais X e Y de cada indivíduo ao longo de todo o vídeo</div></div>
+    </div>
+  </div>
+
+  <div class="visual experiment-visual">
+    <div class="experiment-visual__arena">
+      <canvas class="experiment-arena-canvas" aria-label="Peixe rastreado em arena circular"></canvas>
+    </div>
+
+    <div class="experiment-graphs">
+      <div class="card experiment-graph">
+        <div class="experiment-graph__label">x(t)</div>
+        <svg class="experiment-graph__svg" viewBox="0 0 320 120" preserveAspectRatio="none">
+          <polyline class="experiment-graph__gridline" points="0,60 320,60"></polyline>
+          <polyline class="experiment-graph__line experiment-graph__line--x"></polyline>
+          <circle class="experiment-graph__marker experiment-graph__marker--x" cx="0" cy="60" r="0"></circle>
+        </svg>
+      </div>
+
+      <div class="card experiment-graph">
+        <div class="experiment-graph__label">y(t)</div>
+        <svg class="experiment-graph__svg" viewBox="0 0 320 120" preserveAspectRatio="none">
+          <polyline class="experiment-graph__gridline" points="0,60 320,60"></polyline>
+          <polyline class="experiment-graph__line experiment-graph__line--y"></polyline>
+          <circle class="experiment-graph__marker experiment-graph__marker--y" cx="0" cy="60" r="0"></circle>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>

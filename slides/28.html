@@ -1,0 +1,112 @@
+<section class="slide te-results-slide te-ji-results-slide" data-stage-count="6"
+  data-note="Apresente cada figura seguindo a descrição do print: rede de spillover, índice total, MST e integration index.">
+  <div class="te-results-slide__head">
+    <div class="kicker"></div>
+    <h2>Resultados parciais</h2>
+    <p class="te-results-slide__subtitle">
+      Cada etapa destaca uma figura, a leitura que ela permite e a expressão matemática usada na interpretação.
+    </p>
+  </div>
+
+  <div class="te-results-slide__stage te-results-slide__stage--overview">
+    <div class="card te-ji-results-slide__overview">
+      <div class="te-results-slide__label">Roteiro do slide</div>
+      <p class="te-results-slide__lead">
+        As figuras organizam a leitura da Transfer Entropy em quatro níveis: direção, intensidade, estrutura mínima e integração global.
+      </p>
+      <div class="te-ji-results-slide__map">
+        <span><strong>Fig. 1a</strong><small>rede de spillover por Transfer Entropy</small></span>
+        <span><strong>Fig. 2</strong><small>Total Spillover Index no tempo</small></span>
+        <span><strong>Fig. 4</strong><small>MST da rede de integração</small></span>
+        <span><strong>Fig. 6</strong><small>Integration Index</small></span>
+      </div>
+      <p class="te-ji-results-slide__note">
+        Avance para ver cada figura junto com a descrição e a fórmula correspondente.
+      </p>
+    </div>
+  </div>
+
+  <div class="te-results-slide__stage te-results-slide__stage--figure1">
+    <div class="card te-ji-results-slide__panel te-ji-results-slide__panel--image">
+      <div class="te-ji-results-slide__video-frame">
+        <video
+          class="te-ji-results-slide__figure-video"
+          src="video_windows_so.mp4"
+          poster="window_000_so.png"
+          data-play-stage="2"
+          controls
+          muted
+          playsinline
+          preload="metadata"></video>
+      </div>
+    </div>
+    <div class="card te-results-slide__copy te-ji-results-slide__copy">
+      <span class="te-ji-results-slide__source"></span>
+      <h3><span>&bull;</span><strong>Rede de spillover por Transfer Entropy</strong></h3>
+      <p>
+        Representa o fluxo direcional de informação entre ativos, onde as arestas são definidas pelo spillover líquido:
+      </p>
+      <div class="te-results-slide__equation">\[
+        N(T_{ij}) = T_{ij} - T_{ji}
+      \]</div>
+    </div>
+  </div>
+
+  <div class="te-results-slide__stage te-results-slide__stage--figure2">
+    <div class="card te-ji-results-slide__panel te-ji-results-slide__panel--image">
+      <img src="Figura_2_rep_05.png" alt="Figura 2: Total Spillover Index no tempo." class="te-ji-results-slide__figure-image">
+    </div>
+    <div class="card te-results-slide__copy te-ji-results-slide__copy">
+      <span class="te-ji-results-slide__source"></span>
+      <h3><span>&bull;</span><strong>Total Spillover Index no tempo</strong></h3>
+      <p>
+        Mostra a evolução temporal da intensidade total de transferência de informação no sistema:
+      </p>
+      <div class="te-results-slide__equation">\[
+        T_{\text{total}}=\frac{1}{N}\sum_{i\ne j}T_{ij}
+      \]</div>
+    </div>
+  </div>
+
+  <div class="te-results-slide__stage te-results-slide__stage--figure3">
+    <div class="card te-ji-results-slide__panel te-ji-results-slide__panel--image">
+      <div class="te-ji-results-slide__video-frame">
+        <video
+          class="te-ji-results-slide__figure-video"
+          src="video_windows.mp4"
+          poster="window_000.png"
+          data-play-stage="5"
+          controls
+          muted
+          playsinline
+          preload="metadata"></video>
+      </div>
+    </div>
+    <div class="card te-results-slide__copy te-ji-results-slide__copy">
+      <span class="te-ji-results-slide__source"></span>
+      <h3><span>&bull;</span><strong> MST da rede de integração</strong></h3>
+      <p>
+        O Minimum Spanning Tree extrai a estrutura mínima de conexões mais relevantes da rede baseada em:
+      </p>
+      <div class="te-results-slide__equation">\[
+        \tilde{T}_{ij}=T_{ij}+T_{ji}
+      \]</div>
+    </div>
+  </div>
+
+  <div class="te-results-slide__stage te-results-slide__stage--figure4">
+    <div class="card te-ji-results-slide__panel te-ji-results-slide__panel--image">
+      <img src="Figura_5_rep_01.png" alt="Figura 6: Integration Index." class="te-ji-results-slide__figure-image">
+    </div>
+    <div class="card te-results-slide__copy te-ji-results-slide__copy">
+      <span class="te-ji-results-slide__source"></span>
+      <h3><span>&bull;</span><strong>Integration Index</strong></h3>
+      <p>
+        Mede o grau global de integração do sistema pela distância média da MST:
+      </p>
+      <div class="te-results-slide__equation">\[
+        L(t)=\frac{1}{N-1}\sum_{e_{ij}\in MST} e_{ij}
+      \]</div>
+    </div>
+  </div>
+</section>

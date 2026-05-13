@@ -1,0 +1,209 @@
+<section class="slide pe-stage-slide"
+  data-note="Use a tela inteira em três momentos: série e segmentação, ideia de pi e quadro visual dos padrões ordinais."
+  data-stage-count="4">
+  <div class="pe-stage-slide__stage pe-stage-slide__stage--intro">
+    <div class="pe-bridge-slide__left pe-bridge-slide__left--intro">
+      <div class="kicker">PE</div>
+      <h2>Entropia de Permutação</h2>
+      <p>
+        Muitos métodos observam diretamente os valores da série temporal. Em dados reais, isso traz um problema:
+        ruído, erros de medição e limitações experimentais podem distorcer a dinâmica que queremos estudar.
+      </p>
+
+      <div class="card pe-bridge-slide__callout">
+        <p class="bigline">A mudança de perspectiva é esta:</p>
+        <p>em vez de olhar os números em si, observamos <span class="accent">a ordem local dos valores</span>.</p>
+      </div>
+    </div>
+
+    <div class="pe-bridge-slide__right pe-bridge-slide__right--params">
+      <div class="card pe-bridge-slide__param-card">
+        <div class="permutation-slide__label">Parâmetros iniciais</div>
+        <div class="pe-bridge-slide__param-grid">
+          <div class="card pe-bridge-slide__param-item">
+            <p class="pe-bridge-slide__param-symbol">\(w\)</p>
+            <p class="pe-bridge-slide__param-text">tamanho da janela observada</p>
+            <div class="pe-bridge-slide__mini pe-bridge-slide__mini--w" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <p class="pe-bridge-slide__param-hint">Ex.: <span class="accent">\(w = 3\)</span> olha três pontos por vez.</p>
+          </div>
+          <div class="card pe-bridge-slide__param-item">
+            <p class="pe-bridge-slide__param-symbol">\(\tau\)</p>
+            <p class="pe-bridge-slide__param-text">quanto a janela avança no tempo</p>
+            <div class="pe-bridge-slide__mini pe-bridge-slide__mini--tau" aria-hidden="true">
+              <div class="pe-bridge-slide__tau-track">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="pe-bridge-slide__tau-window">
+                <i></i><i></i><i></i>
+              </div>
+            </div>
+            <p class="pe-bridge-slide__param-hint">Ex.: <span class="accent">\(\tau = 1\)</span> usa pontos consecutivos no tempo.</p>
+          </div>
+        </div>
+        <p class="pe-bridge-slide__param-note">
+          Esses dois parâmetros definem como a série será lida localmente antes de virar padrões ordinais.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pe-stage-slide__stage pe-stage-slide__stage--visual">
+    <div class="card pe-stage-slide__hero">
+      <div class="permutation-slide__label">1. Série temporal</div>
+      <p class="pe-stage-slide__hero-line method-slide__mono">\(X = (1, 4, 2, 5, 8, 3, 6, 9, 2, 7, 10, 11)\)</p>
+    </div>
+
+    <div class="card pe-stage-slide__segments">
+      <div class="permutation-slide__label">2. Segmentação</div>
+      <p class="permutation-slide__segments-text">Com <span class="accent">\(w = 3\)</span> e <span class="accent">\(\tau = 1\)</span>, a série vira blocos locais.</p>
+      <div class="permutation-slide__segments-list pe-stage-slide__segments-list--full">
+        <span class="method-slide__mono">\((1,4,2)\)</span>
+        <span class="method-slide__mono">\((4,2,5)\)</span>
+        <span class="method-slide__mono">\((2,5,8)\)</span>
+        <span class="method-slide__mono">\((5,8,3)\)</span>
+        <span class="method-slide__mono">\((8,3,6)\)</span>
+        <span class="method-slide__mono">\((3,6,9)\)</span>
+        <span class="method-slide__mono">\((6,9,2)\)</span>
+        <span class="method-slide__mono">\((9,2,7)\)</span>
+        <span class="method-slide__mono">\((2,7,10)\)</span>
+        <span class="method-slide__mono">\((7,10,11)\)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pe-stage-slide__stage pe-stage-slide__stage--ordinal">
+    <div class="card pe-stage-slide__ordinal-card pe-stage-slide__ordinal-card--list">
+      <div class="pe-stage-slide__ordinal-eyebrow">Mapa de padrões para \(w = 3\)</div>
+      <h3>Todo bloco vira um ranking local</h3>
+      <p class="pe-stage-slide__ordinal-copy">
+        Para três pontos existem <span class="accent">\(3! = 6\)</span> ordens possíveis. O vetor \(\pi\) guarda
+        a posição relativa de cada valor: menor \(\rightarrow 0\), intermediário \(\rightarrow 1\), maior \(\rightarrow 2\).
+      </p>
+
+      <div class="pe-stage-slide__catalog-table">
+        <div class="pe-stage-slide__catalog-head">Vetor (ranking)</div>
+        <div class="pe-stage-slide__catalog-head">Forma visual (ícone)</div>
+
+        <div class="method-slide__mono">\((0,1,2)\)</div>
+        <div class="pe-stage-slide__shape pe-stage-slide__shape--012"></div>
+
+        <div class="method-slide__mono pe-stage-slide__catalog-active">\((0,2,1)\)</div>
+        <div class="pe-stage-slide__shape pe-stage-slide__shape--021 pe-stage-slide__catalog-active"></div>
+
+        <div class="method-slide__mono">\((1,0,2)\)</div>
+        <div class="pe-stage-slide__shape pe-stage-slide__shape--102"></div>
+
+        <div class="method-slide__mono">\((1,2,0)\)</div>
+        <div class="pe-stage-slide__shape pe-stage-slide__shape--120"></div>
+
+        <div class="method-slide__mono">\((2,0,1)\)</div>
+        <div class="pe-stage-slide__shape pe-stage-slide__shape--201"></div>
+
+        <div class="method-slide__mono">\((2,1,0)\)</div>
+        <div class="pe-stage-slide__shape pe-stage-slide__shape--210"></div>
+      </div>
+
+      <p class="pe-stage-slide__ordinal-foot">
+        A amplitude não entra aqui: só importa quem é menor, médio e maior dentro da janela.
+      </p>
+    </div>
+
+    <div class="card pe-stage-slide__ordinal-card pe-stage-slide__ordinal-card--example">
+      <div class="pe-stage-slide__ordinal-eyebrow">Exemplo guiado</div>
+      <h3>Como ler o bloco \((1,4,2)\)</h3>
+
+      <div class="pe-stage-slide__rank-panel">
+        <div class="pe-stage-slide__rank-plot" aria-hidden="true">
+          <svg viewBox="0 0 180 100" class="pe-stage-slide__rank-lines">
+            <path d="M40 72 L92 20 L144 56" />
+            <circle cx="40" cy="72" r="5" />
+            <circle cx="92" cy="20" r="5" />
+            <circle cx="144" cy="56" r="5" />
+          </svg>
+        </div>
+        <div class="pe-stage-slide__rank-window method-slide__mono">
+          <span>\(1\)</span>
+          <span>\(4\)</span>
+          <span>\(2\)</span>
+        </div>
+      </div>
+
+      <div class="pe-stage-slide__rank-steps">
+        <div class="pe-stage-slide__rank-step">
+          <span class="pe-stage-slide__step-number">1</span>
+          <strong>Ordene os valores</strong>
+          <p class="method-slide__mono">\(1 < 2 < 4\)</p>
+        </div>
+        <div class="pe-stage-slide__rank-step">
+          <span class="pe-stage-slide__step-number">2</span>
+          <strong>Troque valor por rank</strong>
+          <p>\(1 \mapsto 0\), \(2 \mapsto 1\), \(4 \mapsto 2\)</p>
+        </div>
+        <div class="pe-stage-slide__rank-step pe-stage-slide__rank-step--wide">
+          <span class="pe-stage-slide__step-number">3</span>
+          <strong>Volte para a ordem original da janela</strong>
+          <div class="pe-stage-slide__rank-chips method-slide__mono">
+            <span>\(1 \rightarrow 0\)</span>
+            <span>\(4 \rightarrow 2\)</span>
+            <span>\(2 \rightarrow 1\)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pe-stage-slide__rank-result method-slide__mono">
+        <span>\((1,4,2)\)</span>
+        <span>\(\Rightarrow\)</span>
+        <strong>\(\pi = (0,2,1)\)</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="pe-stage-slide__stage pe-stage-slide__stage--counting">
+    <div class="card pe-stage-slide__count-card pe-stage-slide__count-card--formula">
+      <div class="permutation-slide__label">Fórmula de contagem relativa</div>
+      <p class="pe-stage-slide__count-math">\[
+        p(\pi_i)=\frac{\sum_{t:\,\pi_t=\pi_i}1}{\sum_t 1}
+      \]</p>
+      <div class="pe-stage-slide__count-notes">
+        <span>Probabilidade do padrão \(\pi_i\)</span>
+        <span>Número de vezes que \(\pi_i\) ocorre</span>
+        <span>Número total de observações</span>
+      </div>
+    </div>
+
+    <div class="card pe-stage-slide__count-card pe-stage-slide__count-card--table">
+      <div class="permutation-slide__label">Tabela de ocorrências</div>
+      <table class="permutation-slide__table pe-stage-slide__count-table">
+        <thead>
+          <tr>
+            <th>\(\pi\)</th>
+            <th>Ocorrências</th>
+            <th>\(p(\pi)\)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>\((0,1,2)\)</td><td>4</td><td>\(4/10\)</td></tr>
+          <tr><td>\((0,2,1)\)</td><td>1</td><td>\(1/10\)</td></tr>
+          <tr><td>\((1,0,2)\)</td><td>1</td><td>\(1/10\)</td></tr>
+          <tr><td>\((1,2,0)\)</td><td>2</td><td>\(2/10\)</td></tr>
+          <tr><td>\((2,0,1)\)</td><td>2</td><td>\(2/10\)</td></tr>
+          <tr><td>\((2,1,0)\)</td><td>0</td><td>\(0/10\)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="pe-stage-slide__stage pe-stage-slide__stage--entropy">
+    <div class="card pe-stage-slide__entropy-card">
+      <div class="permutation-slide__label">Entropia de Permutação</div>
+      <p class="pe-stage-slide__entropy-math">\[
+        PE = - \sum_{\pi} p(\pi)\,\log p(\pi)
+      \]</p>
+      <p class="pe-stage-slide__entropy-copy">
+        Formalmente, a Entropia de Permutação mede a incerteza associada à distribuição dos padrões ordinais observados na série.
+      </p>
+    </div>
+  </div>
+</section>

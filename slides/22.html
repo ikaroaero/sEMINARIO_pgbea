@@ -1,0 +1,160 @@
+<section class="slide te-slide"
+  data-note="Apresente a Transfer Entropy como motivação para medir influência direcional no tempo."
+  >
+  <div class="te-slide__stage te-slide__stage--intro te-slide__intro-stage">
+    <div class="te-slide__intro-grid">
+      <div class="card te-slide__intro-panel te-slide__intro-panel--idea">
+        <div class="te-slide__label">Motivação</div>
+        <h3 class="te-slide__spread-title">Informação não fica parada: ela <span class="accent">se espalha</span>.</h3>
+        <p class="te-slide__spread-copy">
+          Quando um peixe detecta um predador, essa perturbação não permanece local:
+          ela se propaga pela rede de interações e reorganiza o movimento coletivo do cardume.
+        </p>
+
+        <div class="te-slide__spread-visual" aria-hidden="true" style="position: relative;">
+          <!-- Painel de Ajustes de Simulação Removido -->
+          
+          <canvas
+            class="shoal-canvas te-slide__spread-canvas"
+            data-fish-count="42"
+            data-speed-factor="0.5"
+            data-scene-type="threat"
+          ></canvas>
+          <div class="te-slide__threat-fish"></div>
+          <div class="te-slide__threat-ring te-slide__threat-ring--one"></div>
+          <div class="te-slide__threat-ring te-slide__threat-ring--two"></div>
+          <div class="te-slide__threat-ring te-slide__threat-ring--three"></div>
+
+        </div>
+
+        <div class="te-slide__spread-steps">
+          <div>
+            <strong>1. Detecção</strong>
+            <span>Um peixe percebe a ameaça.</span>
+          </div>
+          <div>
+            <strong>2. Propagação</strong>
+            <span>A informação se espalha localmente.</span>
+          </div>
+          <div>
+            <strong>3. Integração</strong>
+            <span>O grupo ajusta seu movimento como rede de interações.</span>
+          </div>
+          <div>
+            <strong>4. Resposta coletiva</strong>
+            <span>O cardume responde como um sistema.</span>
+          </div>
+        </div>
+
+        <div class="te-slide__spread-footer">
+          <strong>A resposta coletiva emerge das interações locais.</strong>
+        </div>
+      </div>
+
+      <div class="card te-slide__intro-panel te-slide__intro-panel--formal">
+        <div class="te-slide__label">Leitura informacional</div>
+        <h3 class="te-slide__intro-card-title">Quem ajuda a antecipar o próximo movimento?</h3>
+        <p class="te-slide__intro-card-copy">
+          A Transfer Entropy procura identificar quando o comportamento passado
+          de um indivíduo melhora a previsão do comportamento futuro de outro.
+        </p>
+        <div class="te-slide__equation-box">
+          <span class="te-slide__equation-token">comportamento<br>passado</span>
+          <span class="te-slide__equation-arrow">→</span>
+          <span class="te-slide__equation-token">mudança<br>futura</span>
+        </div>
+        <div class="te-slide__insight-box">
+          <strong>É uma medida de influência direcional no tempo.</strong>
+          <span>
+            Ela revela como a informação flui através das interações e se transforma
+            em comportamento coletivo.
+          </span>
+        </div>
+        <div class="te-slide__example-box">
+          <strong>Exemplo:</strong>
+          <span>
+            a presença de um predador é detectada por poucos peixes, mas a informação se propaga
+            pela rede de interações até guiar a resposta de todo o cardume.
+          </span>
+        </div>
+        <p class="te-slide__mini-footer">
+          Medir essas influências é <span class="accent">entender como o cardume pensa e age como um todo</span>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card te-slide__stage te-slide__stage--intuition te-slide__panel">
+    <div class="te-slide__label">Intuição do cálculo</div>
+    <div class="te-slide__flow">
+      <div class="te-slide__token">
+        <span>Passado de X</span>
+        <strong>\(X_{t-k}^{(k)}\)</strong>
+      </div>
+      <div class="te-slide__plus">+</div>
+      <div class="te-slide__token te-slide__token--source">
+        <span>Passado de Y</span>
+        <strong>\(Y_{t-l}^{(l)}\)</strong>
+      </div>
+      <div class="te-slide__arrow">-&gt;</div>
+      <div class="te-slide__token te-slide__token--target">
+        <span>Futuro de X</span>
+        <strong>\(X_t\)</strong>
+      </div>
+    </div>
+    <p class="te-slide__takeaway">
+      Primeiro controlamos a memória própria de \(X\). Depois perguntamos se o passado de
+      \(Y\) ainda reduz a incerteza sobre \(X_t\).
+    </p>
+  </div>
+
+  <div class="card te-slide__stage te-slide__stage--formula te-slide__panel">
+    <div class="te-slide__label">Formalmente</div>
+    <div class="te-slide__formula-grid">
+      <p class="te-slide__math">\[
+        T_{Y \to X}^{(k,l)}(t)
+        = I\left(X_t;\;Y_{t-l}^{(l)}\mid X_{t-k}^{(k)}\right)
+      \]</p>
+      <p class="te-slide__math te-slide__math--small">\[
+        T_{Y \to X}^{(k,l)}(t)
+        = H\left(X_t\mid X_{t-k}^{(k)}\right)
+        - H\left(X_t\mid X_{t-k}^{(k)},Y_{t-l}^{(l)}\right)
+      \]</p>
+    </div>
+    <div class="te-slide__formula-notes">
+      <p><span class="accent">Antes:</span> incerteza sobre \(X_t\) usando apenas \(X\).</p>
+      <p><span class="yellow">Depois:</span> incerteza sobre \(X_t\) depois de incluir \(Y\).</p>
+      <p><span class="pink">TE:</span> a redução de incerteza atribuída ao passado de \(Y\).</p>
+    </div>
+  </div>
+
+  <div class="te-slide__stage te-slide__stage--lags">
+    <div class="card te-slide__panel te-slide__lag-card">
+      <div class="te-slide__label">Na prática</div>
+      <p>
+        Os atrasos <span class="accent">k</span> e <span class="accent">l</span>
+        definem quanta memória de cada série entra no cálculo.
+      </p>
+      <p>
+        Repetindo o cálculo por pares e janelas temporais, cada janela gera uma matriz de
+        influência.
+      </p>
+      <p class="te-slide__takeaway">
+        Essa matriz vira uma <span class="yellow">rede dinâmica direcionada</span> do cardume.
+      </p>
+    </div>
+
+    <div class="visual te-slide__network" aria-hidden="true">
+      <div class="edge" style="left:23%;top:30%;width:38%;transform:rotate(20deg)"></div>
+      <div class="edge" style="left:31%;top:65%;width:34%;transform:rotate(-38deg)"></div>
+      <div class="edge" style="left:47%;top:38%;width:28%;transform:rotate(48deg)"></div>
+      <div class="edge" style="left:23%;top:30%;width:45%;transform:rotate(64deg)"></div>
+      <div class="node" style="left:21%;top:27%"></div>
+      <div class="node" style="left:60%;top:40%;background:var(--yellow)"></div>
+      <div class="node" style="left:32%;top:66%;background:var(--pink)"></div>
+      <div class="node" style="left:72%;top:69%;background:var(--green)"></div>
+      <div class="node" style="left:46%;top:23%"></div>
+    </div>
+  </div>
+</section>
+
