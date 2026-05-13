@@ -56,7 +56,7 @@ let gwpeLensAnimationFrame = null;
 const entropyTimelineSlides = [];
 const slideFragmentProgress = new Map();
 let mathTypesetRetryId = null;
-const deckAssetVersion = '20260513-fix-image-paths';
+const deckAssetVersion = '20260513-zebrafish-asset';
 
 // 2. Função que busca os arquivos HTML e os insere na página
 async function loadSlides() {
